@@ -2,7 +2,7 @@
     -webkit-text-stroke-width: 2px;
     -moz-text-stroke-width: 2px;
     -webkit-text-stroke-color: #111827;
-    -moz-text-stroke-color: #111827;
+    -moz-text-stroke-color: #C8345C;
     color: transparent;
 }
 
@@ -11,7 +11,7 @@
 }
 
 .stroke-shadow {
-    color: #ffffff;
+    color: #FB6EAB;
     text-shadow: -2px 0 var(--accent-color), 0 -2px var(--accent-color), 2px 0 var(--accent-color), 0 2px var(--accent-color), 2px 2px var(--accent-color), -2px -2px var(--accent-color), -2px 2px var(--accent-color), 2px -2px var(--accent-color), 6px 6px var(--stroke-shadow-color);
 }
 
@@ -38,5 +38,5 @@
 }
 
 .halftone-color:after {
-    background-color: #db2777;
+    background-color: #FB6EAB;
 }
