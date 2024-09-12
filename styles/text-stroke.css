@@ -9,8 +9,8 @@
     -webkit-background-clip: text;
             background-clip: text;
     background-image: -webkit-gradient(linear, left top, right top, from(#C8345C), color-stop(#00a2ff), color-stop(#ff00d2), to(#C8345C));
-    background-image: -o-linear-gradient(left, #09f1b8, #00a2ff, #ff00d2, #fed90f);
-    background-image: linear-gradient(to right, #09f1b8, #00a2ff, #ff00d2, #fed90f);
+    background-image: -o-linear-gradient(left, #FFF1DD, #7E6CF1, #FB6EAB, #C8345C);
+    background-image: linear-gradient(to right, #FFF1DD, #7E6CF1 #FB6EAB, #C8345C);
     color: whitesmoke;
     font-size: 30vmin;
     font-size: var(--font-size);

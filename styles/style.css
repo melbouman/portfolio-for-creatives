@@ -10,7 +10,7 @@
 
 /* TODO: Delete the Google Fonts below and add the Google Fonts you want to use on your site. Each Google font that you load will slightly increase the download speed of your site so make sure to only included necessary fonts here. */
 
-@import url("https://fonts.googleapis.com/css2?family=Gelasio:ital,wght@0,400..700;1,400..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap'");
 @import url("https://fonts.googleapis.com/css2?family=Eczar:wght@400;500;600;700;800&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&display=swap'");
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap");
@@ -80,15 +80,15 @@ html {
 /* TODO: Adjust the variables below, create new variables as desired, and delete the variables that you do not want to use. */
 
 :root {
-  --body-typeface: "Inter", sans-serif;
+  --body-typeface: "Outfit", sans-serif;
   --heading-typeface: "Eczar", serif;
   --project-title-typeface: "Eczar", serif;
   --background-color: #C8345C;
   --background-color-about: #FFF1DD;
   --background-color-footer: #FFF1DD;
   --alt-background-color: #000000;
-  --background-color-holding-page: rgba(82, 0, 255, 0.6);
-  --h1-color: #444444;
+  --background-color-holding-page: rgba(7, 4, 14, 0.6);
+  --h1-color: #FFF1DD;
   --h2-color: #444444;
   --h3-color: #444444;
   --h4-color: #444444;
@@ -97,10 +97,10 @@ html {
   --primary-text-color: #222;
   --holding-page-title-color: #FFF1DD;
   --accent-color: #7E6CF1;
-  --overlay-color: #7E6CF1;
+  --overlay-color: #FFF1DD;
   --overlay-title-color: #FFF1DD;
   --overlay-description-color: #FFF1DD;
-  --hyperlink-color: #5200ff;
+  --hyperlink-color: #444444;
   --hyperlink-alternate-color: #FB6EAB;
   --hover-color: #111;
   --visited-color: #7E6CF1;
@@ -112,7 +112,7 @@ html {
   --text-selection-background-color: #5200ff;
   --linear-gradient-color-1: #ff057c;
   --linear-gradient-color-2: #7E6CF1;
-  --linear-gradient-color-3: #321575;
+  --linear-gradient-color-3: #FFF1DD;
   --stroke-shadow-color: rgba(0, 0, 0, 0.4);
 }
 
@@ -153,7 +153,7 @@ svg {
 */
 
 h1 {
-  font-size: 2rem;
+  font-size: 2.9rem;
   font-family: var(--heading-typeface);
   margin-bottom: 1rem;
   color: var(--h1-color);
