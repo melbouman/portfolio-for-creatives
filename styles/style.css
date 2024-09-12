@@ -11,7 +11,7 @@
 /* TODO: Delete the Google Fonts below and add the Google Fonts you want to use on your site. Each Google font that you load will slightly increase the download speed of your site so make sure to only included necessary fonts here. */
 
 @import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap'");
-@import url("https://fonts.googleapis.com/css2?family=Eczar:wght@400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&display=swap'");
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap");
 
@@ -97,7 +97,7 @@ html {
   --primary-text-color: #222;
   --holding-page-title-color: #0b0a08;
   --accent-color: #7E6CF1;
-  --overlay-color: #FFF1DD;
+  --overlay-color: #FB6EAB;
   --overlay-title-color: #FFF1DD;
   --overlay-description-color: #FFF1DD;
   --hyperlink-color: #444444;
@@ -845,6 +845,6 @@ a:active {
   /* TODO: Add styles here for XX-large devices. */
 
   .grid {
-    grid-template-columns: repeat(auto-fit, minmax(800px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
   }
 }
