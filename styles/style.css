@@ -103,13 +103,13 @@ html {
   --hyperlink-color: #444444;
   --hyperlink-alternate-color: #FB6EAB;
   --hover-color: #111;
-  --visited-color: #7E6CF1;
+  --visited-color: #FFF1DD;
   --project-title-color: #7E6CF1;
   --project-sidebar-background-color: #FB6EAB;
   --project-sidebar-text-color: white;
   --heart-color: darkred;
   --holding-page-footer-color: #f8f8ff;
-  --text-selection-background-color: #5200ff;
+  --text-selection-background-color: #FFF1DD;
   --linear-gradient-color-1: #ff057c;
   --linear-gradient-color-2: #7E6CF1;
   --linear-gradient-color-3: #FFF1DD;
@@ -330,7 +330,7 @@ a:active {
 }
 
 .logo {
-  width: 3rem;
+  width: 4%;
   /* TODO: Adjust the width of the logo on mobile devices here. */
 }
 
