@@ -82,7 +82,7 @@ html {
 :root {
   --body-typeface: "Outfit", sans-serif;
   --heading-typeface: "Eczar", serif;
-  --project-title-typeface: "Eczar", serif;
+  --project-title-typeface: "Outfit", sans-serif;
   --background-color: #C8345C;
   --background-color-about: #FFF1DD;
   --background-color-footer: #FFF1DD;
@@ -95,7 +95,7 @@ html {
   --h5-color: #444444;
   --h6-color: #444444;
   --primary-text-color: #222;
-  --holding-page-title-color: #FFF1DD;
+  --holding-page-title-color: #0b0a08;
   --accent-color: #7E6CF1;
   --overlay-color: #FFF1DD;
   --overlay-title-color: #FFF1DD;
@@ -110,7 +110,7 @@ html {
   --heart-color: darkred;
   --holding-page-footer-color: #f8f8ff;
   --text-selection-background-color: #FFF1DD;
-  --linear-gradient-color-1: #ff057c;
+  --linear-gradient-color-1: #444444;
   --linear-gradient-color-2: #7E6CF1;
   --linear-gradient-color-3: #FFF1DD;
   --stroke-shadow-color: rgba(0, 0, 0, 0.4);
@@ -845,6 +845,6 @@ a:active {
   /* TODO: Add styles here for XX-large devices. */
 
   .grid {
-    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(800px, 1fr));
   }
 }
