@@ -81,37 +81,37 @@ html {
 
 :root {
   --body-typeface: "Outfit", sans-serif;
-  --heading-typeface: "Eczar", serif;
+  --heading-typeface: "Outfit", serif;
   --project-title-typeface: "Outfit", sans-serif;
   --background-color: #FFF1DD;
   --background-color-about: #FFF1DD;
   --background-color-footer: #FFF1DD;
   --alt-background-color: #000000;
   --background-color-holding-page: rgba(7, 4, 14, 0.6);
-  --h1-color: #FFF1DD;
-  --h2-color: #444444;
-  --h3-color: #444444;
-  --h4-color: #444444;
-  --h5-color: #444444;
-  --h6-color: #444444;
+  --h1-color: #ff1500;
+  --h2-color: #ff1500;
+  --h3-color: #ff1500;
+  --h4-color: #ff1500;
+  --h5-color: #ff1500;
+  --h6-color: #ff1500;
   --primary-text-color: #222;
   --holding-page-title-color: #0b0a08;
   --accent-color: #7E6CF1;
   --overlay-color: #FB6EAB;
-  --overlay-title-color: #FFF1DD;
-  --overlay-description-color: #FFF1DD;
+  --overlay-title-color: #ff1500;
+  --overlay-description-color: #ff1500;
   --hyperlink-color: #444444;
-  --hyperlink-alternate-color: #FB6EAB;
+  --hyperlink-alternate-color: #ff1500;
   --hover-color: #111;
   --visited-color: #FFF1DD;
-  --project-title-color: #7E6CF1;
-  --project-sidebar-background-color: #FB6EAB;
-  --project-sidebar-text-color: white;
+  --project-title-color: #ff1500;
+  --project-sidebar-background-color: #FFF1DD;
+  --project-sidebar-text-color: #444444;
   --heart-color: darkred;
   --holding-page-footer-color: #f8f8ff;
   --text-selection-background-color: #FFF1DD;
-  --linear-gradient-color-1: #444444;
-  --linear-gradient-color-2: #7E6CF1;
+  --linear-gradient-color-1: #FFF1DD;
+  --linear-gradient-color-2: #FB6EAB;
   --linear-gradient-color-3: #FFF1DD;
   --stroke-shadow-color: rgba(0, 0, 0, 0.4);
 }
@@ -692,7 +692,7 @@ a:active {
   }
 
   h1 {
-    font-size: 4.275rem;
+    font-size: 3.375rem;
   }
 
   h2 {
