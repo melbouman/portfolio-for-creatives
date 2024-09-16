@@ -13,7 +13,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap'");
 @import url("https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&display=swap'");
-@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap");
 
 /*
 
@@ -81,37 +81,37 @@ html {
 
 :root {
   --body-typeface: "Outfit", sans-serif;
-  --heading-typeface: "Outfit", serif;
+  --heading-typeface: "Cormorant+Garamond", serif;
   --project-title-typeface: "Outfit", sans-serif;
-  --background-color: #FFF1DD;
-  --background-color-about: #FFF1DD;
-  --background-color-footer: #FFF1DD;
+  --background-color: ##0018ce;
+  --background-color-about: ##0018ce;
+  --background-color-footer: #0018ce;
   --alt-background-color: #000000;
   --background-color-holding-page: rgba(7, 4, 14, 0.6);
-  --h1-color: #ff1500;
-  --h2-color: #ff1500;
-  --h3-color: #ff1500;
-  --h4-color: #ff1500;
-  --h5-color: #ff1500;
-  --h6-color: #ff1500;
+  --h1-color: #0018ce;
+  --h2-color: #0018ce;
+  --h3-color: #0018ce;
+  --h4-color: #0018ce;
+  --h5-color: #0018ce;
+  --h6-color: #0018ce;
   --primary-text-color: #222;
-  --holding-page-title-color: #0b0a08;
+  --holding-page-title-color: #0018ce;
   --accent-color: #7E6CF1;
-  --overlay-color: #FB6EAB;
-  --overlay-title-color: #ff1500;
-  --overlay-description-color: #ff1500;
+  --overlay-color: #FFF1DD;
+  --overlay-title-color: #0018ce;
+  --overlay-description-color: #0018ce;
   --hyperlink-color: #444444;
-  --hyperlink-alternate-color: #ff1500;
+  --hyperlink-alternate-color: #0018ce;
   --hover-color: #111;
   --visited-color: #FFF1DD;
-  --project-title-color: #ff1500;
+  --project-title-color: #0018ce;
   --project-sidebar-background-color: #FFF1DD;
-  --project-sidebar-text-color: #444444;
+  --project-sidebar-text-color: #0018ce;
   --heart-color: darkred;
   --holding-page-footer-color: #f8f8ff;
   --text-selection-background-color: #FFF1DD;
   --linear-gradient-color-1: #FFF1DD;
-  --linear-gradient-color-2: #FB6EAB;
+  --linear-gradient-color-2: #0018ce;
   --linear-gradient-color-3: #FFF1DD;
   --stroke-shadow-color: rgba(0, 0, 0, 0.4);
 }
@@ -153,7 +153,7 @@ svg {
 */
 
 h1 {
-  font-size: 2.9rem;
+  font-size: 1.9rem;
   font-family: var(--heading-typeface);
   margin-bottom: 1rem;
   color: var(--h1-color);
