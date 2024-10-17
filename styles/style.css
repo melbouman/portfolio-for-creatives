@@ -82,7 +82,7 @@ html {
 
 :root {
   --body-typeface: "Outfit", sans-serif;
-  --heading-typeface: "Josefin", sans;
+  --heading-typeface: "Outfit", sans-serif;
   --project-title-typeface: "Archivo+Black", sans-serif;
   --background-color: #fff1dd;
   --background-color-about: #0044ff;
