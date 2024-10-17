@@ -14,7 +14,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&display=swap'");
 @import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Alata&family=Archivo+Black&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Alata&family=Archivo+Black&display=swap");
 
 /*
 
@@ -82,9 +82,9 @@ html {
 
 :root {
   --body-typeface: "Outfit", sans-serif;
-  --heading-typeface: "Josefin"; sans;
+  --heading-typeface: "Josefin", sans;
   --project-title-typeface: "Archivo+Black", sans-serif;
-  --background-color: #FFF1DD;
+  --background-color: #fff1dd;
   --background-color-about: #0044ff;
   --background-color-footer: #dde3ff;
   --alt-background-color: #000000;
@@ -98,7 +98,7 @@ html {
   --primary-text-color: #222;
   --holding-page-title-color: #0b0b0b;
   --accent-color: #000000;
-  --overlay-color: #FFF1DD;
+  --overlay-color: #fff1dd;
   --overlay-title-color: #000000;
   --overlay-description-color: #000000;
   --hyperlink-color: #444444;
@@ -106,14 +106,14 @@ html {
   --hover-color: #111;
   --visited-color: #000000;
   --project-title-color: #000000;
-  --project-sidebar-background-color: #FFF1DD;
+  --project-sidebar-background-color: #fff1dd;
   --project-sidebar-text-color: #000000;
   --heart-color: rgb(255, 255, 255);
-  --holding-page-footer-color: #FFF1DD;
-  --text-selection-background-color: #FFF1DD;
-  --linear-gradient-color-1: #FFF1DD;
-  --linear-gradient-color-2: #FFF1DD;
-  --linear-gradient-color-3: #FFF1DD;
+  --holding-page-footer-color: #fff1dd;
+  --text-selection-background-color: #fff1dd;
+  --linear-gradient-color-1: #fff1dd;
+  --linear-gradient-color-2: #fff1dd;
+  --linear-gradient-color-3: #fff1dd;
   --stroke-shadow-color: rgba(0, 0, 0, 0.4);
 }
 
@@ -202,6 +202,9 @@ em {
   font-style: italic;
 }
 
+.footer-email-link {
+  font-size: 2rem;
+}
 .fineprint {
   font-size: 0.875rem;
 }
@@ -321,7 +324,6 @@ a:active {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  
 }
 
 .branding-navigation {
@@ -355,7 +357,7 @@ img {
 }
 
 .hero-icon {
-  font-size: rem;
+  font-size: 1rem;
 }
 
 .hero-footer {
@@ -363,7 +365,6 @@ img {
   justify-content: space-between;
   flex-direction: column;
   align-items: center;
-  
 }
 
 .hero-footer-navigation {
@@ -371,7 +372,6 @@ img {
   flex-direction: column;
   justify-content: center;
   padding: 1rem;
-  
 }
 
 /* Work Page Layout
@@ -385,116 +385,118 @@ img {
 */
 * {
   margin: 0;
-  padding: 0.5;
+  padding: 0.5rem;
   box-sizing: border-box;
 }
 
-:root{
+:root {
   --index: calc(1vw + 1vh);
-  --transition: cubic-bezier(.1, .7, 0, 1);
+  --transition: cubic-bezier(0.1, 0.7, 0, 1);
 }
 
-body{
-  background-color: #FFF1DD;
+body {
+  background-color: #fff1dd;
 }
 
-.wrapper{
+.wrapper {
   display: flex;
   align-items: center;
   justify-content: center;
   height: 100vh;
 }
 
-.items{
+.items {
   display: flex;
   gap: 0.2rem;
   perspective: calc(var(--index) * 35);
 }
 
-.item{
+.item {
   width: calc(var(--index) * 8);
   height: calc(var(--index) * 10);
   background-color: #222;
   background-size: cover;
   background-position: center;
   cursor: pointer;
-  filter: grayscale(1) brightness(.5);
-  transition: transform 1.25s var(--transition), filter 3s var(--transition), width 1.25s var(--transition);
+  filter: grayscale(1) brightness(0.5);
+  transition: transform 1.25s var(--transition), filter 3s var(--transition),
+    width 1.25s var(--transition);
   will-change: transform, filter, rotateY, width;
 }
 
-.item::before, .item::after{
-  content: '';
+.item::before,
+.item::after {
+  content: "";
   position: absolute;
   height: 100%;
   width: 20px;
   right: calc(var(--index) * -1);
 }
 
-.item::after{
+.item::after {
   left: calc(var(--index) * -1);
 }
 
-.items .item:hover{
+.items .item:hover {
   filter: inherit;
   transform: translateZ(calc(var(--index) * 10));
 }
 
 /*Right*/
 
-.items .item:hover + *{
+.items .item:hover + * {
   filter: inherit;
   transform: translateZ(calc(var(--index) * 8.5)) rotateY(35deg);
   z-index: -1;
 }
 
-.items .item:hover + * + *{
+.items .item:hover + * + * {
   filter: inherit;
   transform: translateZ(calc(var(--index) * 5.6)) rotateY(40deg);
   z-index: -2;
 }
 
-.items .item:hover + * + * + *{
+.items .item:hover + * + * + * {
   filter: inherit;
   transform: translateZ(calc(var(--index) * 2.5)) rotateY(30deg);
   z-index: -3;
 }
 
-.items .item:hover + * + * + * + *{
+.items .item:hover + * + * + * + * {
   filter: inherit;
-  transform: translateZ(calc(var(--index) * .6)) rotateY(15deg);
+  transform: translateZ(calc(var(--index) * 0.6)) rotateY(15deg);
   z-index: -4;
 }
 
-
 /*Left*/
 
-.items .item:has( + :hover){
+.items .item:has(+ :hover) {
   filter: inherit;
   transform: translateZ(calc(var(--index) * 8.5)) rotateY(-35deg);
 }
 
-.items .item:has( + * + :hover){
+.items .item:has(+ * + :hover) {
   filter: inherit;
   transform: translateZ(calc(var(--index) * 5.6)) rotateY(-40deg);
 }
 
-.items .item:has( + * + * + :hover){
+.items .item:has(+ * + * + :hover) {
   filter: inherit;
   transform: translateZ(calc(var(--index) * 2.5)) rotateY(-30deg);
 }
 
-.items .item:has( + * + * + * + :hover){
+.items .item:has(+ * + * + * + :hover) {
   filter: inherit;
-  transform: translateZ(calc(var(--index) * .6)) rotateY(-15deg);
+  transform: translateZ(calc(var(--index) * 0.6)) rotateY(-15deg);
 }
 
-.items .item:active, .items .item:focus {
-width: 28vw;
-filter: inherit;
-z-index: 100;
-transform: translateZ(calc(var(--index) * 10));
-  margin: 0 .45vw;
+.items .item:active,
+.items .item:focus {
+  width: 28vw;
+  filter: inherit;
+  z-index: 100;
+  transform: translateZ(calc(var(--index) * 10));
+  margin: 0 0.45vw;
 }
 
 .work-wrapper {
@@ -731,7 +733,7 @@ transform: translateZ(calc(var(--index) * 10));
   width: 100%;
   min-height: 100vh;
   /* TODO: Delete the following if you do not want a grainy gradient background on index.html. Be careful not to delete the closing } */
- 
+
   /* For more on grainy gradients see https://grainy-gradients.vercel.app/ */
 }
 
@@ -973,4 +975,3 @@ transform: translateZ(calc(var(--index) * 10));
     grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
   }
 }
-
