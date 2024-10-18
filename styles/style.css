@@ -162,7 +162,7 @@ h1 {
 
 h2 {
   font-size: 2.25rem;
-  font-family: var(--heading-typeface);
+  font-family: var(--body-typeface);
   margin-bottom: 1rem;
   color: var(--h2-color);
 }
@@ -499,9 +499,7 @@ body {
   margin: 0 0.45vw;
 }
 
-.work-wrapper {
-  flex: 1;
-}
+
 
 /* Padding around work grid and project page */
 .portfolio,
@@ -602,7 +600,7 @@ body {
   display: grid;
   grid-template-columns: 1fr;
   grid-gap: 2rem;
-  min-height: 100vh;
+  min-height: 50vh;
   background: var(--background-color-footer);
   padding: 1rem;
 }
