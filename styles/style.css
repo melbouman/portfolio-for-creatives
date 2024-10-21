@@ -330,7 +330,7 @@ a:active {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 2.2rem;
+  padding: 4.2rem;
   align-items: flex-start;
   padding: 1rem;
 }
@@ -345,7 +345,8 @@ img {
   max-width: 100%;
   height: auto;
 }
-
+.hero-headline {
+}
 .hero-headline-wrapper {
   display: flex;
   flex-direction: column;
@@ -371,7 +372,39 @@ img {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 1rem;
+  padding: 0.2rem;
+}
+
+.cursor {
+  width: 44rem;
+  margin: 2 auto;
+  border-right: 2px solid rgba(255, 255, 255, 0.75);
+  font-size: 30px;
+  text-align: flex end;
+  white-space: nowrap;
+  overflow: hidden;
+  transform: translateY(-50%);
+}
+/* Animation */
+.typewriter-animation {
+  animation: typewriter 5s steps(50) 1s 1 normal both,
+    blinkingCursor 500ms steps(50) infinite normal;
+}
+@keyframes typewriter {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+@keyframes blinkingCursor {
+  from {
+    border-right-color: rgba(255, 255, 255, 0.75);
+  }
+  to {
+    border-right-color: transparent;
+  }
 }
 
 /* Work Page Layout
@@ -499,8 +532,6 @@ body {
   margin: 0 0.45vw;
 }
 
-
-
 /* Padding around work grid and project page */
 .portfolio,
 .project-wrapper {
@@ -625,10 +656,6 @@ body {
   grid-row: 4 / 5;
 }
 
-.awards-list {
-  margin-bottom: 2rem;
-}
-
 /* Project Page 
 
 ██████  ██████   ██████       ██ ███████  ██████ ████████     ██████   █████   ██████  ███████ 
@@ -641,7 +668,7 @@ body {
 
 .project-wrapper {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: space-between;
 }
 
@@ -650,7 +677,8 @@ body {
   width: 100%;
   padding: 1rem;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  align-items: center;
   color: var(--project-sidebar-text-color);
   background: var(--project-sidebar-background-color);
 }
@@ -675,7 +703,7 @@ body {
 }
 
 .project-image {
-  width: 100%;
+  width: 200%;
   min-height: 50vh;
   /* TODO: Delete min-height if you want to remove space between project images on project pages on mobile devices. It is used for the demo page only. */
   display: flex;
