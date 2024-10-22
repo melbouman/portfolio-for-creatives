@@ -320,7 +320,7 @@ a:active {
 */
 
 .hero {
-  min-height: 90vh;
+  min-height: 40vh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -330,30 +330,32 @@ a:active {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 4.2rem;
+  padding: 2rem;
   align-items: flex-start;
   padding: 1rem;
 }
 
 .logo {
-  width: 9%;
+  width: 8%;
 
   /* TODO: Adjust the width of the logo on mobile devices here. */
 }
 
-img {
+.img {
   max-width: 100%;
   height: auto;
 }
 .hero-headline {
+  display: flex;
 }
+
 .hero-headline-wrapper {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   flex: 1rem;
   align-items: center;
-  justify-content: space-between;
-  padding: 2rem 4rem;
+  justify-content: center;
+  padding: 1rem 1rem;
   text-align: center;
 }
 
@@ -427,7 +429,7 @@ img {
   --transition: cubic-bezier(0.1, 0.7, 0, 1);
 }
 
-body {
+.body {
   background-color: #fff1dd;
 }
 
@@ -435,7 +437,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100vh;
+  height: 20vh;
 }
 
 .items {
@@ -668,13 +670,15 @@ body {
 
 .project-wrapper {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  align-items: center;
+  justify-content: center;
+  min-height: 80vh;
+  flex-direction: column;
 }
 
 /* Sidebar */
 .project-aside {
-  width: 100%;
+  width: 200%;
   padding: 1rem;
   display: flex;
   flex-direction: row;
