@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 615.47 580.31">
+  <defs>
+    <style>
+      .cls-1, .cls-2, .cls-3 {
+        isolation: isolate;
+      }
+
+      .cls-4 {
+        fill: #374fa2;
+        font-family: Montserrat-ExtraLight, Montserrat;
+        font-size: 333px;
+        font-weight: 200;
+      }
+
+      .cls-2 {
+        font-family: BodoniSvtyTwoITCTT-Book, 'Bodoni 72';
+        font-size: 271.17px;
+      }
+
+      .cls-3 {
+        font-family: Helvetica, Helvetica;
+        font-size: 261.55px;
+        letter-spacing: -.16em;
+      }
+    </style>
+  </defs>
+  <g id="Layer_1" data-name="Layer 1">
+    <g class="cls-1">
+      <g class="cls-1">
+        <g class="cls-1">
+          <text class="cls-2" transform="translate(0 352.75)"><tspan x="0" y="0">M</tspan></text>
+        </g>
+      </g>
+    </g>
+    <g class="cls-1">
+      <g class="cls-1">
+        <g class="cls-1">
+          <text class="cls-3" transform="translate(314.44 349.1)"><tspan x="0" y="0">L</tspan></text>
+        </g>
+      </g>
+    </g>
+  </g>
+  <g id="Layer_7" data-name="Layer 7">
+    <text class="cls-4" transform="translate(156.2 345.73)"><tspan x="0" y="0">e</tspan></text>
+  </g>
+</svg>
