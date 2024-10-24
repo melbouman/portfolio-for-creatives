@@ -96,7 +96,7 @@ html {
   --h6-color: #000000;
   --primary-text-color: #222;
   --holding-page-title-color: #000000;
-  --accent-color: #000000;
+  --accent-color: #eddcdc;
   --overlay-color: #000000;
   --overlay-title-color: #000000;
   --overlay-description-color: #000000;
@@ -415,34 +415,35 @@ a:active {
 
 .item {
   position: relative;
-  width: 250px; /* adjust width as needed */
-  height: 250px; /* adjust height as needed */
+  width: 50%; /* adjust width as needed */
+  height: 50%; /* adjust height as needed */
   background-size: cover;
   background-position: center;
-  margin: 10px;
+  margin: 1rem;
 }
 
 .overlay-text {
   position: absolute;
+  top: 0;
+  right: 0;
   bottom: 0;
   left: 0;
   width: 100%;
-  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: black;
   padding: 10px;
   text-align: center;
-  font-size: 16px; /* adjust as needed */
+  background: var(--accent-color);
+  font-size: 2rem; /* adjust as needed */
   opacity: 0;
   transition: opacity 0.3s ease;
 }
 
 .item:hover .overlay-text {
-  opacity: 1;
-}
-
-* {
-  margin: 0;
-  padding: 5;
-  box-sizing: border-box;
+  opacity: 0.9;
 }
 
 :root {
@@ -455,17 +456,19 @@ a:active {
   align-items: center;
   justify-content: center;
   height: 40vh;
+  flex-direction: column;
 }
 
 .items {
   display: flex;
   gap: 0.4rem;
   perspective: calc(var(--index) * 35);
+  margin-bottom: 6rem;
 }
 
 .item {
-  width: calc(var(--index) * 8);
-  height: calc(var(--index) * 8);
+  width: calc(var(--index) * 14);
+  height: calc(var(--index) * 14);
   background-size: cover;
   background-position: center;
   filter: grayscale(1) brightness(0.5);
@@ -703,7 +706,8 @@ a:active {
 }
 
 .global-footer {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr;
   justify-content: space-between;
   align-items: center;
   background: var(--background-color-footer);
@@ -736,6 +740,9 @@ a:active {
   flex-direction: row;
 }
 
+.arrow {
+  width: 10%;
+}
 /* Sidebar */
 .project-aside {
   width: 200%;
@@ -749,13 +756,15 @@ a:active {
 .project-navigation {
   display: flex;
   flex-direction: row;
-  align-content: space-around;
+  justify-content: space-between;
   text-align: center;
   align-items: center;
+
+  width: 100%;
 }
 
-.arrow {
-  padding: 90;
+.project-info {
+  width: 100%;
 }
 
 .project-image-container {
@@ -766,9 +775,8 @@ a:active {
 }
 
 .project-image {
-  width: 150%;
-  min-height: 70vh;
-  /* TODO: Delete min-height if you want to remove space between project images on project pages on mobile devices. It is used for the demo page only. */
+  width: 100%;
+
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1037,22 +1045,14 @@ a:active {
 
   /* Sidebar on Large Devices */
   .project-aside {
-    width: 35%;
-    height: 65vh;
-    position: -webkit-sticky;
-    position: sticky;
-    top: 5vh;
-    padding-right: 2rem;
+    width: 100%;
+
+    padding: 3rem;
   }
 
   /* Main Project Image Area on Large Devices */
   .project-details {
-    width: 65%;
-  }
-
-  .project-image {
-    min-height: 70vh;
-    /* TODO: Delete min-height if you want to remove space between project images on project pages on large devices. It is used for the demo page only. */
+    width: 100%;
   }
 
   .project-image-container {
@@ -1061,10 +1061,6 @@ a:active {
 
   .project-navigation {
     justify-content: flex-start;
-  }
-
-  .arrow {
-    padding-right: 3rem;
   }
 }
 
