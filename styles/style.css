@@ -15,7 +15,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Mitr:wght@200;300;400;500;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Antic+Didone&family=Jost:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Xanh+Mono:ital@0;1&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Antic+Didone&family=Arimo:ital,wght@0,400..700;1,400..700&family=Fira+Sans+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Jost:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Xanh+Mono:ital@0;1&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Antic+Didone&family=Arimo:ital,wght@0,400..700;1,400..700&family=Fira+Sans+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Jost:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Signika+Negative:wght@300..700&family=Xanh+Mono:ital@0;1&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,100;0,300;0,400;0,500;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,700;1,800;1,900&family=Antic+Didone&family=Arimo:ital,wght@0,400..700;1,400..700&family=Fira+Sans+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Jost:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Signika+Negative:wght@300..700&family=Xanh+Mono:ital@0;1&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Afacad:ital,wght@0,400..700;1,400..700&display=swap");
 /*
 
 Imported stylesheets. Remove the ones you do not want to use.
@@ -81,16 +84,16 @@ html {
 /* TODO: Adjust the variables below, create new variables as desired, and delete the variables that you do not want to use. */
 
 :root {
-  --body-typeface: "Antic+Didone", serif;
-  --heading-typeface: "Jost";
-  --project-title-typeface: "Xanh+Mono";
+  --body-typeface: "Afacad";
+  --heading-typeface: "Playfair+Display", ital;
+  --project-title-typeface: "Signika+Negative";
   --background-color: #ffffff;
   --background-color-about: #ffffff;
   --background-color-footer: #ffffff;
   --alt-background-color: #000000;
   --background-color-holding-page: rgba(0, 0, 0, 0.6);
-  --h1-color: #dc2e99;
-  --h2-color: #000000;
+  --h1-color: #000000;
+  --h2-color: #e54f8b;
   --h3-color: #000000;
   --h4-color: #000000;
   --h5-color: #000000;
@@ -106,7 +109,7 @@ html {
   --hover-color: #dc2e99;
   --visited-color: #000000;
   --project-title-color: #000000;
-  --project-sidebar-background-color: rgb(255, 255, 255);
+  --project-sidebar-background-color: #e2e2df;
   --project-sidebar-text-color: rgb(0, 0, 0);
   --heart-color: rgb(0, 0, 0);
   --holding-page-footer-color: #d92f92;
@@ -150,25 +153,25 @@ svg {
 */
 
 h1 {
-  font-size: 2rem;
-  font-family: var(--project-title-typeface);
-  margin-bottom: 1rem;
+  font-size: 3.6rem;
+  font-family: var(--heading-typeface);
   color: var(--h1-color);
+  margin-bottom: 2rem;
 }
 
 h2 {
-  font-size: 22.25rem;
-  font-family: var(--heading-typeface);
-  margin-bottom: 1rem;
+  font-size: 1.25rem;
+  font-family: var(--project-title-typeface);
   color: var(--h2-color);
+  margin-bottom: 1rem;
 }
 
 h3 {
-  font-size: 1.025rem;
+  font-size: 0.725rem;
   font-family: var(--body-typeface);
-  margin-bottom: 1rem;
   line-height: 1.3;
   color: var(--h3-color);
+  margin-bottom: 2rem;
 }
 
 h4 {
@@ -178,7 +181,7 @@ h4 {
 }
 
 h5 {
-  font-size: 1.1rem;
+  font-size: 1.9rem;
   margin-bottom: 1rem;
   color: var(--h5-color);
 }
@@ -268,15 +271,22 @@ a:active {
   color: var(--hyperlink-alternate-color);
 }
 
+.custom-navigation {
+  letter-spacing: 1px;
+}
 .custom-navigation:hover {
   background: url(assets/temp/heading-background.svg);
   background-size: 15%;
   background-repeat: no-repeat;
   background-position: center center;
+  letter-spacing: 1px;
 }
 
 .heart {
   color: var(--heart-color);
+}
+.heart1 {
+  color: palevioletred;
 }
 
 .footer-nav-item {
@@ -297,10 +307,19 @@ a:active {
   margin-left: 1.2rem;
 }
 
-.project-description {
+.project-description1 {
   font-size: 1.225rem;
   line-height: 1.2;
-  margin-bottom: 1rem;
+  align-content: flex-start;
+  margin-bottom: 2rem;
+
+  padding: 0rem 2rem;
+}
+
+.project-description2 {
+  font-size: 1.225rem;
+  line-height: 1.2;
+  padding: 0rem 3rem;
 }
 
 /* Hero 
@@ -312,6 +331,21 @@ a:active {
 ██   ██ ███████ ██   ██  ██████  
                                  
 */
+/* Container for the blob background */
+.blob-background {
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at 50% 50%, #ffe7f0, #ffffff);
+  animation: blob-animation 10s ease-in-out infinite;
+  z-index: -1; /* Behind main content */
+}
+.blob-background-about {
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at 50% 50%, #f3bfbf, #ffffff);
+  animation: blob-animation 10s ease-in-out infinite;
+  z-index: -1; /* Behind main content */
+}
 
 .head {
   background: #cd679a;
@@ -322,7 +356,8 @@ a:active {
 .ex1,
 .ex3 {
   padding: 60px 0;
-  text-align: center;
+  justify-content: flex-start;
+  text-align: flex-end;
   background: #fff;
   i {
     margin: 0 20px;
@@ -348,19 +383,24 @@ a:active {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding: 2rem;
+  padding: 1rem;
   align-items: flex-start;
   font-family: var(--body-typeface);
 }
 
-.hero-nav {
+.hero-nav1 {
   justify-content: space-around;
-  padding: 1rem;
+  padding: 1rem 1rem;
   flex-direction: column;
 }
-
+.hero-nav2 {
+  justify-content: space-around;
+  padding: 1rem 1rem;
+  flex-direction: column;
+}
 .logo {
-  width: 3rem;
+  width: 2rem;
+  padding: 1rem;
   /* TODO: Adjust the width of the logo on mobile devices here. */
 }
 
@@ -368,8 +408,8 @@ a:active {
   display: flex;
   flex-direction: column;
   flex: 1;
-  padding: 2rem 2rem;
-  text-align: center;
+  justify-content: flex-start;
+  padding: 10rem 10rem;
 }
 
 .hero-icon {
@@ -378,35 +418,14 @@ a:active {
 
 .cursor {
   position: relative;
-  width: 24em;
+  width: 14em;
   margin: 0 auto;
   border-right: 2px solid rgba(255, 255, 255, 0.75);
   font-size: 30px;
-  text-align: center;
+  justify-content: flex-start;
   white-space: nowrap;
   overflow: hidden;
   transform: translateY(-50%);
-}
-/* Animation */
-.typewriter-animation {
-  animation: typewriter 5s steps(50) 1s 1 normal both,
-    blinkingCursor 500ms steps(50) infinite normal;
-}
-@keyframes typewriter {
-  from {
-    width: 0;
-  }
-  to {
-    width: 100%;
-  }
-}
-@keyframes blinkingCursor {
-  from {
-    border-right-color: rgba(255, 255, 255, 0.75);
-  }
-  to {
-    border-right-color: transparent;
-  }
 }
 
 .hero-footer {
@@ -421,6 +440,9 @@ a:active {
   flex-direction: row;
   justify-content: center;
   padding: 1rem;
+}
+.name {
+  font-size: 1rem;
 }
 
 /* Work Page Layout
@@ -441,15 +463,18 @@ a:active {
 .items {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 }
 
 .item {
   position: relative;
-  width: 50%; /* adjust width as needed */
-  height: 50%; /* adjust height as needed */
+  width: 40%; /* adjust width as needed */
+  height: 40%; /* adjust height as needed */
   background-size: cover;
   background-position: center;
   margin: 1rem;
+  box-shadow: 0 0 9px 5px rgba(0, 0, 0, 0.3);
 }
 
 .overlay-text {
@@ -485,7 +510,7 @@ a:active {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 40vh;
+  height: 100%;
   flex-direction: column;
 }
 
@@ -497,11 +522,11 @@ a:active {
 }
 
 .item {
-  width: calc(var(--index) * 14);
-  height: calc(var(--index) * 14);
+  width: calc(var(--index) * 13.5);
+  height: calc(var(--index) * 13.5);
   background-size: cover;
   background-position: center;
-  filter: grayscale(1) brightness(0.5);
+  filter: --hover-color(1) brightness(0.5);
   transition: transform 1.25s var(--transition), filter 3s var(--transition),
     width 1.25s var(--transition);
   will-change: transform, filter, rotateY, width;
@@ -641,33 +666,27 @@ a:active {
 ██   ██ ██████   ██████   ██████     ██    
                                            
 */
-
+.skills {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+}
 .about {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-gap: 3rem;
+  display: flex;
+  gap: 2rem; /* Space between items */
   background: var(--background-color-about);
-  padding: 1rem;
-  flex: 1;
+  padding: 4rem;
 }
 
 .about-item-1 {
-  grid-column: 2 / 3;
-  grid-row: 1 / 3;
+  flex: 2 1 0; /* Takes up 2/3 of the space */
 }
 
 .about-item-2 {
-  grid-column: 2 / 3;
-  grid-row: 2 / 3;
-}
-
-.about-item-3 {
-  grid-column: 2 / 3;
-  grid-row: 2 / 3;
-}
-.about-item-4 {
-  grid-column: 2 / 3;
-  grid-row: 2 / 3;
+  display: flex; /* Takes up 1/3 of the space */
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 /* Global Footer
 
@@ -678,10 +697,10 @@ a:active {
 ██       ██████   ██████     ██    ███████ ██   ██ 
                                                    
 */
+
 .horizontal-scroll {
   width: 100%;
   height: 400px;
-  background: url("assets/branding-images/paws-title.jpg");
   -webkit-animation: backgroundScroll 400s linear infinite;
   animation: backgroundScroll 60s linear infinite;
   background-repeat: no-repeat;
@@ -708,7 +727,7 @@ a:active {
 .horizontal-scroll2 {
   width: 100%;
   height: 400px;
-  background: url("http://mckenziedave.co.uk/1st-touch/footer_bg.png");
+
   -webkit-animation: backgroundScroll2 400s linear infinite;
   animation: backgroundScroll2 30s linear infinite;
   background-repeat: no-repeat;
@@ -733,23 +752,29 @@ a:active {
 }
 
 .global-footer {
-  display: grid;
-  grid-template-columns: 1fr;
-  justify-content: space-between;
-  align-items: center;
+  display: flex; /* Use flexbox */
+  align-items: center; /* Aligns items vertically */
   background: var(--background-color-footer);
-  padding: 4rem;
+  padding: 2rem;
 }
 
 .footer-item-1 {
-  padding: 1rem;
+  display: flex;
+  padding: 2rem;
 }
 
-.footer-item-2 {
-  padding: 1rem;
-  font-family: var(--body-typeface);
-  font-size: xx-large;
+.ex1 {
+  display: flex; /* Make the social icons a flex container */
+  justify-content: flex-end; /* Aligns icons to the right */
+
+  padding: 4rem 4rem;
 }
+
+.footer-item-4 {
+  padding: 2rem;
+  align-items: center;
+}
+
 /* Project Page 
 
 ██████  ██████   ██████       ██ ███████  ██████ ████████     ██████   █████   ██████  ███████ 
@@ -759,20 +784,54 @@ a:active {
 ██      ██   ██  ██████   █████  ███████  ██████    ██        ██      ██   ██  ██████  ███████ 
                                                                                                
 */
+.text-span1 {
+  font-size: 1rem;
+  font-family: "Instrument", serif;
+  margin-bottom: 7rem;
+}
+
+.text-span2 {
+  font-size: 1.6rem;
+  font-family: "Signika+Negative";
+  margin-top: 3rem;
+}
+
+.text-span3 {
+  font-size: 1rem;
+  font-family: "Instrument", serif;
+}
+
+.project-list {
+  padding: 3rem 3rem;
+  width: 100%;
+}
 
 .project-wrapper {
   display: flex;
-  align-items: center;
-  justify-content: space-around;
+  align-items: flex-start;
+  justify-content: center;
   flex-direction: row;
+  margin-bottom: 2rem;
 }
 
-.arrow {
-  width: 10%;
+.arrow1 {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+  padding: 0rem 4rem;
+}
+.arrow2 {
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+  margin-bottom: 0.5rem;
+
+  padding: 0rem 4rem;
 }
 /* Sidebar */
 .project-aside {
-  width: 200%;
+  width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -786,12 +845,16 @@ a:active {
   justify-content: space-between;
   text-align: center;
   align-items: center;
-
   width: 100%;
 }
 
 .project-info {
+  display: flex;
   width: 100%;
+  justify-content: flex-start;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 2rem;
 }
 
 .project-image-container {
@@ -827,7 +890,7 @@ a:active {
 /* Main Project Image Area */
 
 .project-details {
-  width: 100%;
+  width: 60%;
   padding: 1rem;
   /* TODO: Delete background-image and the three linear gradient colors to remove the gradient background on the project page. Be careful not to delete the closing } */
   background-image: linear-gradient(
@@ -983,11 +1046,7 @@ a:active {
   }
 
   .hero {
-    min-height: 100vh;
-  }
-
-  .hero-headline-wrapper {
-    padding: 4rem 4rem;
+    min-height: 100%;
   }
 
   .grid {
@@ -1006,57 +1065,34 @@ a:active {
   }
 
   .about {
-    padding: 4rem;
+    padding: 6rem;
     grid-template-columns: 1fr 1fr 1fr;
   }
 
   .global-footer {
-    padding: 4rem 4rem 4rem 4rem;
-    grid-template-columns: 1fr 1fr 1fr;
-  }
-
-  .about-item-1 {
-    grid-column: 1 / 2;
-    grid-row: 1 / 2;
+    display: flex; /* Use Flexbox */
+    justify-content: space-between; /* Distributes space between items */
+    align-items: center; /* Aligns items vertically */
+    background: var(--background-color-footer);
+    padding: 2rem; /* Padding around the footer */
   }
 
   .footer-item-1 {
-    grid-column: 1 / 2;
-    grid-row: 1 / 2;
-  }
-
-  .about-item-2 {
-    grid-row: 1 / 2;
-    grid-column: 2 / 3;
+    flex: 1; /* Takes up 2/3 of the available space */
+    padding: 4rem;
   }
 
   .footer-item-2 {
-    grid-row: 1 / 2;
-    grid-column: 2 / 3;
-  }
-
-  .about-item-3 {
-    grid-row: 1 / 2;
-    grid-column: 3 / 4;
-  }
-
-  .footer-item-3 {
-    grid-row: 1 / 2;
-    grid-column: 3 / 4;
-  }
-
-  .about-item-4 {
-    grid-row: 2 / 3;
-    grid-column: 1 / 4;
-    text-align: center;
-    align-self: end;
+    flex: 2; /* Takes up 1/3 of the available space */
+    text-align: left; /* Aligns icons to the right */
+    padding: 3rem;
+    font-family: var(--body-typeface);
   }
 
   .footer-item-4 {
     grid-row: 2 / 3;
     grid-column: 1 / 4;
     text-align: center;
-    align-self: end;
   }
 
   /* Padding around work grid and project page */

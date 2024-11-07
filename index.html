@@ -36,19 +36,36 @@
     <link rel="stylesheet" href="./styles/style.css" />
   </head>
   <body class="holding-page">
+    <div class="blob-background">
     <div class="holding-page-wrapper">
       <div class="holding-page-inner-container">
+        <img
+          src="assets/branding-images/mel-index.gif"
+          alt="mel-logo-ux-ui-designer"
+        />
         <a href="work.html">
           <figure class="holding-page-animation"></figure>
-          <h5 class="holding-page-title">Amelia Bouman's Portfolio</h5>
         </a>
       </div>
       <div class="holding-page-footer">
         <p class="holding-page-copyright">
-          &copy; 2020-2024. Hand crafted with <span class="heart">❤</span> by
-          Amelia Bouman.
+          <h5 class="holding-page-title">Amelia Bouman's Portfolio</h5>
+          &copy; 2020-2024. Hand crafted with <span class="heart">❤</span> 
         </p>
       </div>
     </div>
+    </div>
   </body>
 </html>
+<script>
+  myID = document.getElementById("myID");
+
+
+  var myScrollFunc = function () {
+    var y = window.scrollY;
+    if (y >= 800) {
+      myID.className = "bottomMenu show";
+    } else {
+      myID.className = "bottomMenu hide";
+    }
+  };
