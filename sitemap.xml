@@ -1,1 +1,92 @@
-https://melcreative.ca/ 2024-11-19T00:47:11+00:00 1.00 https://melcreative.ca/work 2024-11-19T00:47:11+00:00 0.80 https://melcreative.ca/work.html 2024-11-19T00:47:11+00:00 0.80 https://melcreative.ca/about 2024-11-19T00:47:11+00:00 0.64 https://melcreative.ca/project-1 2024-11-19T00:47:11+00:00 0.64 https://melcreative.ca/project-2 2024-11-19T00:47:11+00:00 0.64 https://melcreative.ca/project-3 2024-11-19T00:47:11+00:00 0.64 https://melcreative.ca/project-5 2024-11-19T00:47:11+00:00 0.64 https://melcreative.ca/project-4 2024-11-19T00:47:11+00:00 0.64 https://melcreative.ca/play 2024-11-19T00:47:11+00:00 0.51 https://melcreative.ca/resume 2024-11-19T00:47:11+00:00 0.51
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+
+<url>
+  <loc>https://melcreative.ca/</loc>
+  <lastmod>2024-11-19T00:47:11+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://melcreative.ca/work</loc>
+  <lastmod>2024-11-19T00:47:11+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://melcreative.ca/work.html</loc>
+  <lastmod>2024-11-19T00:47:11+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://melcreative.ca/about</loc>
+  <lastmod>2024-11-19T00:47:11+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://melcreative.ca/project-1</loc>
+  <lastmod>2024-11-19T00:47:11+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://melcreative.ca/project-2</loc>
+  <lastmod>2024-11-19T00:47:11+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://melcreative.ca/project-3</loc>
+  <lastmod>2024-11-19T00:47:11+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://melcreative.ca/project-5</loc>
+  <lastmod>2024-11-19T00:47:11+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://melcreative.ca/project-4</loc>
+  <lastmod>2024-11-19T00:47:11+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://melcreative.ca/play</loc>
+  <lastmod>2024-11-19T00:47:11+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://melcreative.ca/resume</loc>
+  <lastmod>2024-11-19T00:47:11+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://melcreative.ca/404</loc>
+  <lastmod>2024-11-19T00:47:11+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://melcreative.ca/work-clean</loc>
+  <lastmod>2024-11-19T00:47:11+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://melcreative.ca/work-clean-flier</loc>
+  <lastmod>2024-11-19T00:47:11+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://melcreative.ca/work-grayscale</loc>
+  <lastmod>2024-11-19T00:47:11+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://melcreative.ca/work-ghost</loc>
+  <lastmod>2024-11-19T00:47:11+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+
+
+</urlset>
