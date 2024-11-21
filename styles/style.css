@@ -169,7 +169,7 @@ h4 {
 }
 
 h5 {
-  font-size: 1rem;
+  font-size: 1.3rem;
   margin-bottom: 1rem;
   color: var(--h5-color);
 }
@@ -203,6 +203,7 @@ em {
   font-family: var(--project-title-typeface);
   color: var(--project-title-color);
   margin-bottom: 1rem;
+  padding: 1rem;
 }
 
 .overlay-title {
@@ -582,7 +583,7 @@ a:active {
 /* Padding around work grid and project page */
 .portfolio,
 .project-wrapper {
-  padding: 0.25rem;
+  padding: 2.25rem;
 }
 
 /* Defining the work page grid */
@@ -784,6 +785,7 @@ a:active {
   justify-content: center;
   flex-direction: row;
   margin-bottom: 2rem;
+  padding: 2rem;
 }
 
 .arrow1 {
