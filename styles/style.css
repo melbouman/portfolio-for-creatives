@@ -97,7 +97,7 @@ html {
   --hover-color: #dc2e99;
   --visited-color: #000000;
   --project-title-color: #000000;
-  --project-sidebar-background-color: #e2e2df;
+
   --project-sidebar-text-color: rgb(0, 0, 0);
   --heart-color: rgb(0, 0, 0);
   --holding-page-footer-color: #d92f92;
@@ -488,6 +488,7 @@ a:active {
   gap: 0.4rem;
   perspective: calc(var(--index) * 35);
   margin-bottom: 6rem;
+  padding: 6rem;
 }
 
 .item {
@@ -753,9 +754,46 @@ a:active {
 ██      ██   ██  ██████   █████  ███████  ██████    ██        ██      ██   ██  ██████  ███████ 
                                                                                                
 */
+.project-details {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
 
-.yaletown-project {
-  background-image: url(assets/branding-images/yaletown.png);
+.project-item {
+  display: flex;
+  align-items: flex-start; /* Center items vertically */
+  justify-content: center; /* Center the image-text block horizontally */
+  gap: 20px;
+  text-align: left; /* Ensure text alignment remains consistent */
+  margin-bottom: 12rem;
+}
+
+.image-container {
+  flex-shrink: 0;
+}
+
+.image-container img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.image-description {
+  max-width: 300px;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.image-description h1 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.image-description h3 {
+  margin: 5px 0 0 0;
+  font-size: 14px;
 }
 .text-span1 {
   font-size: 1.2rem;
@@ -781,11 +819,11 @@ a:active {
 
 .project-wrapper {
   display: flex;
-  align-items: flex-start;
-  justify-content: center;
+  width: 100%;
+  justify-content: space-evenly;
   flex-direction: row;
-  margin-bottom: 2rem;
-  padding: 2rem;
+  align-items: center;
+  padding: 6rem;
 }
 
 .arrow1 {
@@ -802,15 +840,6 @@ a:active {
   margin-bottom: 0.5rem;
 
   padding: 0rem 4rem;
-}
-/* Sidebar */
-.project-aside {
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  color: var(--project-sidebar-text-color);
-  background: var(--project-sidebar-background-color);
 }
 
 .project-navigation {
@@ -839,11 +868,10 @@ a:active {
 }
 
 .project-image {
-  width: 100%;
-
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: row;
 }
 
 .large-emoji-placeholder {
@@ -1072,19 +1100,12 @@ a:active {
   /* Padding around work grid and project page */
   .portfolio,
   .project-wrapper {
-    padding: 0.5rem;
+    padding: 4rem;
   }
 
   /* Project Page Flex Direction on Large Devices */
   .project-wrapper {
     flex-direction: row;
-  }
-
-  /* Sidebar on Large Devices */
-  .project-aside {
-    width: 100%;
-
-    padding: 3rem;
   }
 
   /* Main Project Image Area on Large Devices */

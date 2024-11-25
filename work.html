@@ -39,25 +39,25 @@
 
   <body class="work-page">
     <header class="hero-header">
-        <ul class="branding-navigation">
-          <li class="logo">
-            <a href="index.html">
-              <img
-                src="assets/branding-images/mel-logo.png"
-                alt="mel-logo-ux-ui-designer"
-              />
-            </a>
-          </li>
-          <ul class="branding-navigation">
-          <li class="hero-nav1">
-            <a href="project-1.html" class="custom-navigation">PROJECTS</a></li>
-            <li class="hero-nav2">
-            <a href="about.html" class="custom-navigation">ABOUT ME</a></li>
-      
-          </li>
-        </ul>
+      <ul class="branding-navigation">
+        <li class="logo">
+          <a href="index.html">
+            <img
+              src="assets/branding-images/mel-logo.png"
+              alt="mel-logo-ux-ui-designer"
+            />
+          </a>
+        </li>
+        <li class="hero-nav1">
+          <a href="project-1.html" class="custom-navigation">PROJECTS</a>
+        </li>
+        <li class="hero-nav2">
+          <a href="about.html" class="custom-navigation">ABOUT ME</a>
+        </li>
+      </ul>
+         
       </header>
-    </header>
+
     <div class="blob-background">
       <div class="hero-headline-wrapper">
         <h2>Hi, my name is Amelia Bouman!</h2>
@@ -72,18 +72,22 @@
     <section class="work-wrapper">
       <div class="wrapper">
         <div class="items">
-          <div class="item yaletown-project">
+          <div
+            class="item"
+            tabindex="0"
+            style="
+              background-image: url(assets/branding-images/yaletown-work.jpg);">
             <a href="project-1.html">
               <div class="overlay-text">Urban Refined</div></a
             >
-            >
+            
           </div>
 
           <div
             class="item"
             tabindex="0"
             style="
-              background-image: url(assets/branding-images/mellyproductpage.jpg);
+              background-image: url(assets/branding-images/melly-work.jpg);
             "
           >
             <a href="project-2.html">
@@ -94,7 +98,7 @@
           <div
             class="item"
             tabindex="0"
-            style="background-image: url(assets/branding-images/paws-title.jpg)"
+            style="background-image: url(assets/branding-images/paws-work.jpg)"
           >
             <a href="project-3.html">
               <div class="overlay-text">Paws & Places</div></a
@@ -105,7 +109,7 @@
             class="item"
             tabindex="0"
             style="
-              background-image: url(assets/branding-images/Screenshot\ 2024-11-07\ at\ 9.11.50\ PM.png);
+              background-image: url(assets/branding-images/small-work.jpg);
             "
           >
             <a href="project-5.html">
@@ -117,26 +121,15 @@
             class="item"
             tabindex="0"
             style="
-              background-image: url(https://highflyer.sirv.com/cloud/Screenshot_18_4_mscxmr.jpg);
+              background-image: url(assets/branding-images/capstone-work.jpg);
             "
           >
             <a href="project-5.html">
-              <div class="overlay-text">Capstone</div></a
+              <div class="overlay-text">Capstone (Coming Soon)</div></a
             >
           </div>
 
-          <div
-            class="item"
-            tabindex="0"
-            style="
-              background-image: url(https://highflyer.sirv.com/cloud/Screenshot_23_8_nbzwdm.png);
-            "
-          >
-            <a href="project-4.html">
-              <div class="overlay-text">Track Stars</div>
-            </a>
-          </div>
-        </div>
+        </section>
 
         <footer>
           <ul class="global-footer">
@@ -164,7 +157,8 @@
           </p>
         </div>
     </footer>
-    </section>
+
+  
     <script>
       myID = document.getElementById("myID");
 
@@ -179,5 +173,4 @@
 
       window.addEventListener("scroll", myScrollFunc);
     </script>
-  </body>
 </html>
