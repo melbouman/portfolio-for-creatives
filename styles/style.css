@@ -151,7 +151,7 @@ h2 {
   font-size: 1rem;
   font-family: var(--project-title-typeface);
   color: var(--h2-color);
-  margin-bottom: 1rem;
+  margin-bottom: 1.4rem;
 }
 
 h3 {
@@ -377,7 +377,8 @@ a:active {
   display: flex;
   flex-direction: column;
   flex: 1;
-  justify-content: flex-start;
+  justify-content: center;
+  align-items: center;
   padding: 10rem 10rem;
 }
 
@@ -497,7 +498,7 @@ a:active {
   background-size: cover;
   background-position: center;
   filter: brightness(1.5);
-  transition: transform 1.25s var(--transition), filter 3s var(--transition),
+  transition: transform 0.9s var(--transition), filter 3s var(--transition),
     width 1.25s var(--transition);
   will-change: transform, filter, rotateY, width;
 }
