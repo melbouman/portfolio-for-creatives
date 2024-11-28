@@ -72,9 +72,9 @@ html {
 /* TODO: Adjust the variables below, create new variables as desired, and delete the variables that you do not want to use. */
 
 :root {
-  --body-typeface: "Afacad";
-  --heading-typeface: "Playfair+Display", ital;
-  --project-title-typeface: "Signika+Negative";
+  --body-typeface: "Afacad", sans-serif;
+  --heading-typeface: "Playfair Display", serif;
+  --project-title-typeface: "Signika Negative", sans-serif;
   --background-color: #ffffff;
   --background-color-about: #ffffff;
   --background-color-footer: #ffffff;
@@ -110,7 +110,6 @@ body {
   background: var(--background-color);
   display: flex;
   flex-direction: column;
-  min-height: 150vh;
 }
 
 /* The ::selection CSS pseudo-element applies styles to the part of a document that has been highlighted by the user (such as clicking and dragging the mouse across text). */
@@ -927,6 +926,7 @@ a:active {
   text-align: center;
   width: 100%;
   min-height: 100vh;
+
   /* TODO: Delete the following if you do not want a grainy gradient background on index.html. Be careful not to delete the closing } */
 
   /* For more on grainy gradients see https://grainy-gradients.vercel.app/ */
@@ -936,21 +936,17 @@ a:active {
   margin-bottom: 1rem;
 }
 
-.holding-page-title {
-  font-size: 1.5rem;
-  color: var(--holding-page-title-color);
-}
-
 .holding-page-footer {
-  display: grid;
-  place-items: center;
-  min-height: 10vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   width: 100%;
 }
 
 .holding-page-copyright {
-  font-size: 0.8rem;
-  color: var(--holding-page-footer-color);
+  font-size: 1.25rem;
+  color: var(--holding-page-title-color);
   margin-bottom: 0;
 }
 
@@ -1031,10 +1027,6 @@ a:active {
 
 @media (min-width: 992px) {
   /* TODO: Add or adjust styles here for large devices. */
-
-  .holding-page-title {
-    font-size: 2rem;
-  }
 
   h1 {
     font-size: 4.275rem;
