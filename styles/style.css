@@ -296,8 +296,6 @@ a:active {
 }
 
 .project-description1 {
-  margin-top: 0;
-  margin-bottom: 0;
   font-size: 50px;
   font-weight: 200;
   line-height: 128%;
@@ -306,8 +304,7 @@ a:active {
 
 .project-description2 {
   color: #000;
-  margin-top: 0;
-  margin-bottom: 0;
+
   font-size: 18px;
   font-weight: 400;
   line-height: 150%;
