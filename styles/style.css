@@ -140,7 +140,7 @@ svg {
 */
 
 h1 {
-  font-size: 2.6rem;
+  font-size: 3.6rem;
   font-family: var(--heading-typeface);
   color: var(--h1-color);
   margin-bottom: 2rem;
@@ -158,7 +158,7 @@ h3 {
   font-family: var(--body-typeface);
   line-height: 1.3;
   color: var(--h3-color);
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
 
 h4 {
@@ -180,7 +180,7 @@ h6 {
 }
 
 p {
-  font-size: 1rem;
+  font-size: 0.9rem;
   line-height: 1.3;
   margin-bottom: 1rem;
 }
@@ -296,18 +296,22 @@ a:active {
 }
 
 .project-description1 {
-  font-size: 1.225rem;
-  line-height: 1.2;
-  align-content: flex-start;
-  margin-bottom: 2rem;
-
-  padding: 6rem 2rem;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 50px;
+  font-weight: 200;
+  line-height: 128%;
+  text-decoration: none;
 }
 
 .project-description2 {
-  font-size: 1.225rem;
-  line-height: 1.2;
-  padding: 0rem 3rem;
+  color: #000;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 150%;
+  text-decoration: none;
 }
 
 /* Hero 
@@ -583,14 +587,7 @@ a:active {
 
 /* Padding around work grid and project page */
 .portfolio,
-.project-wrapper {
-  display: flex;
-  width: 100%;
-  justify-content: flex-start;
-  flex-direction: row;
-  align-items: flex-start;
-  padding: 4rem 4rem;
-}
+
 
 /* Defining the work page grid */
 .grid {
@@ -642,90 +639,6 @@ a:active {
                                            
 */
 
-:root {
-  /* Base font size */
-  font-size: 10px;
-}
-
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
-body {
-  min-height: 100vh;
-  background-color: #fafafa;
-}
-
-.container {
-  max-width: 100rem;
-  margin: 0 auto;
-  padding: 0 2rem 2rem;
-}
-
-.heading {
-  font-family: "Montserrat", Arial, sans-serif;
-  font-size: 4rem;
-  font-weight: 500;
-  line-height: 1.5;
-  text-align: center;
-  padding: 3.5rem 0;
-  color: #1a1a1a;
-}
-
-.heading span {
-  display: block;
-}
-
-.gallery {
-  display: flex;
-  flex-wrap: wrap;
-  /* Compensate for excess margin on outer gallery flex items */
-  margin: -1rem -1rem;
-}
-
-.gallery-item {
-  /* Minimum width of 24rem and grow to fit available space */
-  flex: 1 0 24rem;
-  /* Margin value should be half of grid-gap value as margins on flex items don't collapse */
-  margin: 1rem;
-  box-shadow: 0.3rem 0.4rem 0.4rem rgba(0, 0, 0, 0.4);
-  overflow: hidden;
-}
-
-.gallery-image {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 400ms ease-out;
-}
-
-.gallery-image:hover {
-  transform: scale(1.15);
-}
-
-/*
-
-The following rule will only run if your browser supports CSS grid.
-
-Remove or comment-out the code block below to see how the browser will fall-back to flexbox styling. 
-
-*/
-
-@supports (display: grid) {
-  .gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(24rem, 1fr));
-    grid-gap: 2rem;
-  }
-
-  .gallery,
-  .gallery-item {
-    margin: 0;
-  }
-}
 .skills {
   display: flex;
   justify-content: flex-start;
@@ -791,10 +704,40 @@ Remove or comment-out the code block below to see how the browser will fall-back
 ██      ██   ██  ██████   █████  ███████  ██████    ██        ██      ██   ██  ██████  ███████ 
                                                                                                
 */
+.outline-text {
+  display: inline-block; /* Keeps the text and border tight */
+  border: 2px solid hotpink; /* Border color and thickness */
+  border-radius: 20px; /* Rounds the border */
+  padding: 5px 15px; /* Adds space inside the border */
+  font-size: 18px; /* Text size */
+  font-family: "Arial", sans-serif; /* Clean, readable font */
+  color: hotpink; /* Text color matching the border */
+  margin-right: 10px; /* Adds space between the words */
+}
+
+.case-study-link {
+  color: hotpink; /* Sets the text color to hot pink */
+  text-decoration: none; /* Removes default underline */
+  font-weight: bold;
+  font-style: var(--body-typeface); /* Makes the text bold */
+  padding: 10px 20px; /* Small padding to add space around the text */
+  border: 2px solid hotpink; /* Adds a hot pink border */
+  text-align: center; /* Centers the text inside the link */
+  transition: 0.3s; /* Smooth transition for hover effects */
+}
+
+.case-study-link:hover {
+  background-color: hotpink; /* Adds a background color on hover */
+  color: white; /* Changes text color on hover */
+}
+
 .project-details {
-  display: flex;
   flex-direction: column;
-  gap: 20px;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+  text-decoration: none;
+  display: flex;
 }
 
 .project-item {
@@ -804,6 +747,12 @@ Remove or comment-out the code block below to see how the browser will fall-back
   gap: 20px;
   text-align: left; /* Ensure text alignment remains consistent */
   margin-bottom: 12rem;
+  padding: 6rem;
+}
+
+.project-item .image-container img {
+  border-radius: 10px; /* Adjust for the desired roundness */
+  border: 2px solid black; /* Black outline */
 }
 
 .image-container {
@@ -855,12 +804,21 @@ Remove or comment-out the code block below to see how the browser will fall-back
 }
 
 .project-wrapper {
+  grid-row-gap: 10px;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 2rem 2rem;
+  text-decoration: none;
   display: flex;
-  width: 100%;
-  justify-content: space-evenly;
-  flex-direction: row;
+}
+
+.case-study {
+  display: flex;
+  justify-content: center;
   align-items: center;
-  padding: 18rem;
+  padding: 12rem;
+  flex-direction: column;
 }
 
 .arrow1 {
@@ -1130,12 +1088,13 @@ Remove or comment-out the code block below to see how the browser will fall-back
   /* Padding around work grid and project page */
   .portfolio,
   .project-wrapper {
-    padding: 6rem;
+    padding: 12rem;
   }
 
   /* Project Page Flex Direction on Large Devices */
   .project-wrapper {
-    flex-direction: row;
+    flex-direction: column;
+    padding: 12rem 12rem;
   }
 
   /* Main Project Image Area on Large Devices */
