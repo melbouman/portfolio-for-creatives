@@ -734,6 +734,7 @@ a:active {
   align-items: flex-start;
   width: 100%;
   text-decoration: none;
+  padding: 6rem 6rem;
   display: flex;
 }
 
