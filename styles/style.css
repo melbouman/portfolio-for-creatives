@@ -305,7 +305,7 @@ a:active {
 .project-description2 {
   color: #000;
 
-  font-size: 18px;
+  font-size: 19px;
   font-weight: 400;
   line-height: 150%;
   text-decoration: none;
@@ -802,11 +802,11 @@ a:active {
 }
 
 .project-wrapper {
-  grid-row-gap: 10px;
+  grid-row-gap: 8px;
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
-  padding: 2rem 2rem;
+  padding: 6rem;
   text-decoration: none;
   display: flex;
 }
