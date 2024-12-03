@@ -742,10 +742,10 @@ a:active {
   display: flex;
   align-items: flex-start; /* Center items vertically */
   justify-content: center; /* Center the image-text block horizontally */
-  gap: 20px;
+  gap: 10px;
   text-align: left; /* Ensure text alignment remains consistent */
-  margin-bottom: 12rem;
-  padding: 6rem;
+  margin-bottom: 4rem;
+  padding: 20rem;
 }
 
 .project-item .image-container img {
