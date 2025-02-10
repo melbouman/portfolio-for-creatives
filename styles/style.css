@@ -803,10 +803,10 @@ a:active {
 
 .project-wrapper {
   grid-row-gap: 8px;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: flex-start;
   align-items: flex-start;
-  padding: 6rem;
+  padding: 6rem 6rem;
   text-decoration: none;
   display: flex;
 }
@@ -1092,7 +1092,7 @@ a:active {
   /* Project Page Flex Direction on Large Devices */
   .project-wrapper {
     flex-direction: column;
-    padding: 12rem 12rem;
+    align-items: flex-start;
   }
 
   /* Main Project Image Area on Large Devices */
