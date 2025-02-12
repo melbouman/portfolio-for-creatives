@@ -202,7 +202,7 @@ em {
   font-family: var(--project-title-typeface);
   color: var(--project-title-color);
   margin-bottom: 1rem;
-  padding: 1rem;
+  padding: 4rem;
 }
 
 .overlay-title {
@@ -797,7 +797,7 @@ a:active {
 }
 
 .project-list {
-  padding: 3rem 3rem;
+  padding: 6rem 3rem;
   width: 100%;
 }
 
@@ -806,7 +806,7 @@ a:active {
   flex-direction: row;
   justify-content: flex-start;
   align-items: flex-start;
-  padding: 6rem 6rem;
+  padding: 6rem 4rem;
   text-decoration: none;
   display: flex;
 }
