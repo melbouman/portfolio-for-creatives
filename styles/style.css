@@ -81,7 +81,7 @@ html {
   --alt-background-color: #000000;
   --background-color-holding-page: rgba(0, 0, 0, 0.6);
   --h1-color: #000000;
-  --h2-color: #e54f8b;
+  --h2-color: #000000;
   --h3-color: #000000;
   --h4-color: #000000;
   --h5-color: #000000;
@@ -140,7 +140,7 @@ svg {
 */
 
 h1 {
-  font-size: 2rem;
+  font-size: 1rem;
   font-family: var(--heading-typeface);
   color: var(--h1-color);
   margin-bottom: 2rem;
@@ -162,8 +162,9 @@ h3 {
 }
 
 h4 {
-  font-size: 0.5rem;
+  font-size: 0.9rem;
   margin-bottom: 1rem;
+  font-family: var(--heading-typeface);
   color: var(--h4-color);
 }
 
@@ -370,10 +371,6 @@ a:active {
   color: #fff;
 }
 
-.Google {
-  background-color: #ffffff;
-  color: #fff;
-}
 .sticky-icon a i {
   background-color: #fff;
   height: 40px;
@@ -390,28 +387,11 @@ a:active {
   color: #000000;
 }
 
-.sticky-icon a i.fa-google-plus-g {
-  background-color: #fff;
-  color: #000000;
-}
-
 .sticky-icon a i.fa-instagram {
   background-color: #fff;
   color: #000000;
 }
 
-.sticky-icon a i.fa-youtube {
-  background-color: #fff;
-  color: #000000;
-}
-
-.sticky-icon a i.fa-twitter {
-  background-color: #fff;
-  color: #000000;
-}
-.fas fa-shopping-cart {
-  background-color: #fff;
-}
 #myBtn {
   height: 50px;
   display: none;
@@ -452,7 +432,7 @@ a:active {
 
 .branding-navigation {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-between;
   padding: 1rem;
   align-items: flex-start;
@@ -478,10 +458,8 @@ a:active {
 .hero-headline-wrapper {
   display: flex;
   flex-direction: column;
-  flex: 1;
-  justify-content: center;
-  align-items: center;
-  padding: 10rem 10rem;
+  justify-content: flex-start;
+  align-items: flex-start;
 }
 
 .hero-icon {
@@ -500,19 +478,6 @@ a:active {
   transform: translateY(-50%);
 }
 
-.hero-footer {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  text-align: center;
-}
-
-.hero-footer-navigation {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  padding: 1rem;
-}
 .name {
   font-size: 1rem;
 }
@@ -526,6 +491,18 @@ a:active {
  ███ ███   ██████  ██   ██ ██   ██     ██      ██   ██  ██████  ███████ 
 
 */
+.video-container {
+  display: flex;
+  justify-content: center; /* Centers horizontally */
+  align-items: center; /* Centers vertically */
+  height: 100vh; /* Makes the container take full viewport height */
+}
+
+.video-container video {
+  max-width: 100%; /* Ensures it resizes properly */
+  height: auto; /* Maintains aspect ratio */
+}
+
 
 .work-wrapper {
   position: relative;
@@ -775,6 +752,524 @@ div.scroll-container {
 div.scroll-container img {
   padding: 10px;
 }
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --items: min(30rem, 80vw);
+  --color-base: #181213;
+  scroll-timeline: --page block;
+
+  @media (prefers-reduced-motion: no-preference) {
+    scroll-behavior: smooth;
+  }
+}
+
+body {
+  font: 300 1rem/1.33 "Helvetica";
+  color: var(--color-base);
+  display: grid;
+  overflow-x: hidden;
+}
+
+img {
+  max-inline-size: 100%;
+  block-size: auto;
+}
+
+hr[id] {
+  border: 0;
+  margin: 0;
+}
+
+/* animations */
+
+@keyframes clip {
+  to {
+    transform: scale(1.75);
+  }
+}
+@keyframes scroll {
+  to {
+    translate: calc((var(--items) * -3) + 15vw) 0;
+  }
+}
+@keyframes moveup {
+  to {
+    transform: translateY(var(--moveup));
+  }
+}
+@keyframes reveal {
+  85%,
+  100% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+body > svg {
+  block-size: 0;
+  inline-size: 0;
+
+  clipPath {
+    transform-origin: calc(50vw * var(--dpr, 1)) calc(50vh * var(--dpr, 1));
+
+    /* On retina displays the transform-origin 
+       * for the clipPath is bugged (opened an issue on
+       * https://issues.chromium.org/issues/366293477)
+       * so I need to approximately detect your pixel 
+       * density with a list of "common" values.
+       */
+    @media (min-resolution: 1.5dppx) {
+      --dpr: 1.5;
+    }
+    @media (min-resolution: 2dppx) {
+      --dpr: 2;
+    }
+    @media (min-resolution: 2.4dppx) {
+      --dpr: 2.4;
+    }
+    @media (min-resolution: 2.75dppx) {
+      --dpr: 2.75;
+    }
+    @media (min-resolution: 3dppx) {
+      --dpr: 3;
+    }
+    @media (min-resolution: 3.5dppx) {
+      --dpr: 3.5;
+    }
+    @media (min-resolution: 4dppx) {
+      --dpr: 4;
+    }
+
+    transform: scale(0);
+    animation: linear clip 1 forwards;
+    animation-timeline: --page;
+    animation-range: entry 10dvb exit 100dvb;
+  }
+}
+
+/* header */
+
+header {
+  position: fixed;
+  z-index: 1;
+
+  > div {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 1vw;
+    border-bottom: 0.2px solid;
+  }
+
+  svg {
+    inline-size: 8rem;
+  }
+
+  ul {
+    display: flex;
+    gap: 2.5rem;
+
+    @media (width < 48rem) {
+      display: none;
+    }
+
+    :any-link {
+      font-weight: 300;
+      font-size: 1.25rem;
+      color: inherit;
+      text-decoration: none;
+    }
+  }
+}
+
+/* general sections style */
+section {
+  padding-block: 7dvb;
+}
+
+/* general hero style */
+
+.hero {
+  min-block-size: 30dvb;
+
+  @supports (animation-timeline: view()) {
+    block-size: 100dvb;
+    inline-size: 100vw;
+    position: sticky;
+    top: 0;
+    grid-area: 1 / 1;
+
+    --moveup: -100dvb;
+    animation: linear moveup 1 forwards;
+    animation-timeline: --page;
+    animation-range: entry 200dvb entry 300dvb;
+
+    /* give enough room to run scroll-animations
+       * so the main element is not hidden
+       */
+    ~ main {
+      margin-block-start: 200dvb;
+      min-block-size: 100dvb;
+    }
+  }
+
+  > div {
+    block-size: 100%;
+    display: grid;
+    align-items: center;
+    margin-inline: 10vw;
+  }
+
+  :any-link {
+    --hover: 0;
+    background-color: rgba(0, 0, 00, var(--hover));
+    transition: all 0.33s;
+    &:hover {
+      color: #000000;
+      border-color: transparent;
+      --hover: 1;
+    }
+  }
+
+  [href^="#"] {
+    position: absolute;
+    border-radius: 50%;
+    border: 0;
+    bottom: 3rem;
+    left: calc(50% - 2rem);
+    block-size: 4rem;
+    padding: 0.75rem;
+    aspect-ratio: 1;
+    color: inherit;
+
+    @media (prefers-reduced-motion: no-preference) {
+      --moveup: -1rem;
+      animation: moveup 1s cubic-bezier(0.5, 0, 1, 0.5) infinite alternate;
+
+      &:hover {
+        animation-play-state: paused;
+      }
+    }
+    @supports (not (animation-timeline: view())) {
+      display: none;
+    }
+  }
+
+  svg {
+    transform: rotateZ(0.25turn);
+    inline-size: 100%;
+    aspect-ratio: 1;
+    fill: currentColor;
+  }
+
+  .hero__content {
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+    gap: 2rem;
+    padding-right: 12rem;
+  }
+
+  :where(:any-link) {
+    --hover: 0;
+    color: inherit;
+    text-decoration: none;
+    border-radius: 1.5rem;
+    padding: 0.75rem 2rem;
+    font-size: 92%;
+    letter-spacing: 0;
+    border: 1px solid currentColor;
+  }
+}
+
+/* 2nd hero hidden */
+#shape-the-future {
+  color: #fff;
+  background: linear-gradient(125deg, rgb(255, 255, 255), rgb(248, 211, 234));
+
+  @supports (animation-timeline: view()) {
+    clip-path: url("#blob");
+  }
+
+  > div {
+    gap: 10vw;
+
+    @supports (animation-timeline: view()) {
+      grid-template-columns: 55vw auto;
+
+      translate: 0 0;
+      will-change: translate;
+      animation: ease-out scroll 1 forwards;
+      animation-timeline: --page;
+      animation-range: entry 100dvb entry 200dvb;
+    }
+  }
+
+  ul {
+    display: flex;
+    block-size: calc(100dvb - 10rem);
+
+    @supports (not (animation-timeline: view())) {
+      border-inline-end: 1px #fff solid;
+      block-size: auto;
+
+      @media (width < 40rem) {
+        border-inline: 0;
+      }
+    }
+  }
+
+  li {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    padding-inline: 2.5rem;
+    border-inline-start: 1px #6e2c59 solid;
+    inline-size: var(--items);
+
+    h3,
+    p {
+      text-align: left;
+    }
+
+    span:has(img),
+    img {
+      max-block-size: 30dvmin;
+    }
+
+    @media (width < 48rem) {
+      span:has(img),
+      img {
+        display: none;
+      }
+    }
+
+    @supports (not (animation-timeline: view())) {
+      inline-size: auto;
+      h3,
+      p {
+        text-align: center;
+      }
+
+      @media (width < 40rem) {
+        border-inline: 0;
+
+        &:not(:last-child) {
+          padding-block-end: 1rem;
+          border-block-end: 1px #fff solid;
+        }
+      }
+    }
+  }
+}
+
+main {
+  section {
+    min-block-size: 100dvb;
+
+    @media (prefers-reduced-motion: no-preference) {
+      opacity: 0;
+      transform: translateY(6rem);
+      animation: ease-out reveal 1 forwards;
+      animation-timeline: view();
+      animation-range: cover 10% cover 30%;
+    }
+
+    > div {
+      padding-inline: 10vw;
+    }
+  }
+
+  .news {
+    margin-block-start: 5dvb;
+
+    li {
+      padding-block: 2dvb;
+      border-bottom: 1px solid;
+      container: article / inline-size;
+      --hover: 0;
+      &:hover {
+        --hover: 1;
+      }
+    }
+
+    article {
+      position: relative;
+      display: grid;
+      grid-template-columns: minmax(15vw, 22rem) auto;
+      @container article (width <= 48rem) {
+        grid-template-columns: 1fr;
+      }
+
+      align-items: center;
+      gap: 2rem;
+      opacity: calc(0.7 + (var(--hover) * 0.3));
+      transition: opacity 0.33s;
+    }
+
+   
+
+    }
+
+    :any-link {
+      display: grid;
+      grid-template: auto auto / 1fr minmax(2.5rem, 6cqi);
+      gap: 1rem min(5vw, 5rem);
+      justify-content: space-between;
+      align-items: center;
+      color: inherit;
+      text-decoration: none;
+
+      [itemprop="author"] {
+        grid-area: 1 / 1 / 2 / 3;
+        font-size: 1rem;
+        line-height: 1.33;
+        color: #000000;
+        flex: 1 0 100%;
+      }
+
+      [itemprop="name"] {
+        grid-area: 2 / 1 / 3 / 2;
+        flex-wrap: nowrap;
+        font-size: clamp(1.35rem, 2.6vw, 2.1rem);
+        line-height: 1.33;
+      }
+
+      &:hover [itemprop="name"] {
+        text-decoration: underline;
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+      }
+    }
+
+    svg {
+      grid-area: 1 / 2 / 3 / 3;
+      aspect-ratio: 1;
+      padding: 0.75rem;
+      inline-size: 100%;
+      border-radius: 50%;
+      border: 2px solid;
+      clip-path: polygon(18% 0, 100% 0, 100% 100%, 18% 100%);
+      color: #f0a7ed;
+      fill: currentColor;
+      transition: transform 0.33s;
+      transform: rotateZ(calc(var(--hover) * 0.25turn));
+    }
+  }
+}
+
+/* show header on scrollup and hide on scrolldown  
+ * original demo: https://codepen.io/fcalderan/pen/LYKwyyd
+ */
+
+@property --scroll-direction {
+  syntax: "<number>";
+  inherits: true;
+  initial-value: 0;
+}
+
+@property --scroll {
+  syntax: "<number>";
+  inherits: true;
+  initial-value: 0;
+}
+
+@property --scroll-delayed {
+  syntax: "<number>";
+  inherits: true;
+  initial-value: 0;
+}
+
+@keyframes adjust-pos {
+  to {
+    --scroll: 10000;
+    --scroll-delayed: 10000;
+  }
+}
+
+:root {
+  animation: adjust-pos linear both;
+  animation-timeline: scroll(root);
+}
+
+body {
+  transition: --scroll-delayed 0.55s linear;
+  --scroll-velocity: calc(var(--scroll) - var(--scroll-delayed));
+  --scroll-speed: max(var(--scroll-velocity), -1 * var(--scroll-velocity));
+  --scroll-direction: calc(var(--scroll-velocity) / var(--scroll-speed));
+}
+
+header {
+  transition: transform 0.5s 0s;
+  transform: translateY(var(--translate));
+
+  @container style(--scroll-direction: 0) {
+    transition-delay: calc(infinity * 1s);
+  }
+
+  @container style(--scroll-direction: -1) {
+    --translate: 0;
+  }
+
+  @container style(--scroll-direction: 1) {
+    --translate: calc(-100% - 2px);
+  }
+}
+
+/* show warning */
+
+.warning {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  place-content: center;
+  font-size: 2rem;
+
+  p {
+    position: relative;
+    background: #000000;
+    padding: 3rem;
+    font-weight: 400;
+    border: 3px rgb(0, 0, 0) solid;
+    border-radius: 1rem;
+    inline-size: min(45rem, 85vw);
+    box-shadow: 0 0 0 50vmax rgba(204, 128, 186, 0.7);
+    -webkit-background-clip: text;
+    color: transparent;
+    background-image: linear-gradient(
+      125deg,
+      rgb(254, 206, 233),
+      rgb(255, 183, 201)
+    );
+
+    &::before {
+      content: "⚠️" / "warning!";
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      background: #fff;
+    }
+  }
+}
+
+body:hover .warning {
+  @supports (not (animation-timeline: view())) {
+    display: grid;
+  }
+}
+
 /* Global Footer
 
 ███████  ██████   ██████  ████████ ███████ ██████  
@@ -864,11 +1359,6 @@ div.scroll-container img {
   margin-bottom: 4rem;
   padding: 2rem 25rem;
   width: 100%;
-}
-
-.project-item .image-container img {
-  border-radius: 10px; /* Adjust for the desired roundness */
-  border: 2px solid black; /* Black outline */
 }
 
 .image-container {
@@ -1004,18 +1494,6 @@ div.scroll-container img {
 }
 
 /* Main Project Image Area */
-
-.project-details {
-  width: 60%;
-  padding: 1rem;
-  /* TODO: Delete background-image and the three linear gradient colors to remove the gradient background on the project page. Be careful not to delete the closing } */
-  background-image: linear-gradient(
-    -225deg,
-    var(--linear-gradient-color-1) 0%,
-    var(--linear-gradient-color-2) 50%,
-    var(--linear-gradient-color-3) 100%
-  );
-}
 
 /* 
 
@@ -1207,18 +1685,18 @@ div.scroll-container img {
   /* Padding around work grid and project page */
   .portfolio,
   .project-wrapper {
-    padding: 2rem 22rem;
+    padding: 2rem 2rem;
   }
 
   .project-list {
-    padding: 2rem 14.8rem;
+    padding: 2rem 4.8rem;
     width: 100%;
   }
   /* Project Page Flex Direction on Large Devices */
   .project-wrapper {
     flex-direction: column;
     align-items: flex-start;
-    padding: 2rem 22rem;
+    padding: 2rem 2rem;
   }
 
   /* Main Project Image Area on Large Devices */
