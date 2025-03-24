@@ -458,8 +458,11 @@ a:active {
 .hero-headline-wrapper {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
   align-items: flex-start;
+    justify-content: center;
+    margin-bottom: 1vh; /* Reduce spacing between hero and next section */
+  
+  
 }
 
 .hero-icon {
@@ -493,20 +496,26 @@ a:active {
 */
 .video-container {
   display: flex;
-  justify-content: center; /* Centers horizontally */
-  align-items: center; /* Centers vertically */
-  height: 100vh; /* Makes the container take full viewport height */
+  justify-content: center;
+  align-items: flex-start; /* Aligns video higher */
+
+    height: auto;
+    padding-top: 1vh; /* Reduce spacing above */
+    margin-bottom: 1.5vh; /* Reduce spacing below */
+
+
 }
 
 .video-container video {
-  max-width: 100%; /* Ensures it resizes properly */
+  max-width: 80%; /* Reduce size but keep it responsive */
+  max-height: 80vh; /* Prevent it from taking too much vertical space */
   height: auto; /* Maintains aspect ratio */
 }
 
 
 .work-wrapper {
   position: relative;
-  padding: 4rem;
+  padding: 1rem;
 }
 
 .items {
@@ -514,17 +523,22 @@ a:active {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  gap: 0.2rem; /* Reduce gap between items */
+  margin-bottom: 1rem; /* Reduce space below */
+  padding: 2rem 0; /* Reduce top/bottom padding */
 }
+
 
 .item {
   position: relative;
-  width: 40%; /* adjust width as needed */
-  height: 40%; /* adjust height as needed */
+  width: 40%; /* Keep the size */
+  height: 40%; 
   background-size: cover;
   background-position: center;
-  margin: 1rem;
+  margin: 0.5rem; /* Reduce spacing around each item */
   box-shadow: 0 0 9px 5px rgba(0, 0, 0, 0.3);
 }
+
 
 .overlay-text {
   position: absolute;
@@ -559,15 +573,17 @@ a:active {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100%;
+
   flex-direction: column;
+  padding: 1rem 0; /* Reduce top/bottom padding */
 }
+
 
 .items {
   display: flex;
   gap: 0.4rem;
   perspective: calc(var(--index) * 35);
-  margin-bottom: 6rem;
+  margin-bottom: 2rem;
   padding: 6rem;
 }
 
@@ -1351,14 +1367,9 @@ body:hover .warning {
 }
 
 .project-item {
-  display: flex;
-  align-items: flex-start; /* Center items vertically */
-  justify-content: center; /* Center the image-text block horizontally */
-  gap: 10px;
-  text-align: left; /* Ensure text alignment remains consistent */
-  margin-bottom: 4rem;
-  padding: 2rem 25rem;
-  width: 100%;
+  padding: 1rem; /* ✅ No more overflow */
+  flex-direction: column; /* ✅ Stack elements */
+  text-align: center; /* ✅ Center-align text */
 }
 
 .image-container {
@@ -1417,7 +1428,7 @@ body:hover .warning {
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
-  padding: 2rem 12rem;
+  padding: 2rem 2rem;
   text-decoration: none;
   display: flex;
 }
@@ -1456,12 +1467,9 @@ body:hover .warning {
 }
 
 .project-info {
-  display: flex;
-  width: 100%;
-  justify-content: space-evenly;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
-  padding: 4rem;
+  padding: 1rem; /* Less padding */
 }
 
 .project-image-container {
@@ -1488,9 +1496,8 @@ body:hover .warning {
 }
 
 .project-text {
-  width: 100%;
-  font-size: 3.25rem;
-  padding: 3rem;
+  font-size: 2rem; /* Slightly smaller heading */
+  padding: 1.5rem; /* Reduce padding */
 }
 
 /* Main Project Image Area */
@@ -1696,7 +1703,7 @@ body:hover .warning {
   .project-wrapper {
     flex-direction: column;
     align-items: flex-start;
-    padding: 2rem 2rem;
+    padding: 4rem 8rem; /* More space on large screens */
   }
 
   /* Main Project Image Area on Large Devices */
@@ -1711,7 +1718,24 @@ body:hover .warning {
   .project-navigation {
     justify-content: flex-start;
   }
+
+ 
+
+  .project-info {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 4rem 6rem; /* Add more padding for better spacing */
+  }
+
+
+  .project-details {
+    width: 100%;
+    padding: 6rem 12rem; /* More padding for readability */
+  }
 }
+
+
 
 /* X-Large devices (large desktops, 1200px and up)*/
 
