@@ -1329,9 +1329,22 @@ body:hover .warning {
 ██      ██   ██  ██████   █████  ███████  ██████    ██        ██      ██   ██  ██████  ███████ 
                                                                                                
 */
+
+.figma-container {
+  width: 100%;
+  max-width: 1200px; /* Adjust width as needed */
+  margin: 20px auto;
+}
+
+.figma-container iframe {
+  width: 100%;
+  height: 600px; /* Adjust height as needed */
+  border: none;
+}
+
 .outline-text {
   display: inline-block; /* Keeps the text and border tight */
-  border: 2px solid hotpink; /* Border color and thickness */
+  border: 2px solid rgb(0, 0, 0); /* Border color and thickness */
   border-radius: 20px; /* Rounds the border */
   padding: 5px 15px; /* Adds space inside the border */
   font-size: 18px; /* Text size */
