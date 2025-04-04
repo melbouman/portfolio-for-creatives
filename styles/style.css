@@ -436,7 +436,7 @@ a:active {
   justify-content: space-between;
   padding: 1rem;
   align-items: flex-start;
-  font-family: var(--body-typeface);
+  font-family: 'Times New Roman', Times, serif;
 }
 
 .hero-nav1 {
@@ -500,14 +500,15 @@ a:active {
   align-items: flex-start; /* Aligns video higher */
 
     height: auto;
-    padding-top: 1vh; /* Reduce spacing above */
+    padding-top: 4.5vh; /* Reduce spacing above */
+    padding-right: 2vw; /* Reduce spacing on the right */
     margin-bottom: 1.5vh; /* Reduce spacing below */
 
 
 }
 
 .video-container video {
-  max-width: 80%; /* Reduce size but keep it responsive */
+  max-width: 60%; /* Reduce size but keep it responsive */
   max-height: 80vh; /* Prevent it from taking too much vertical space */
   height: auto; /* Maintains aspect ratio */
 }
@@ -890,7 +891,7 @@ header {
 
   ul {
     display: flex;
-    gap: 2.5rem;
+    gap: 0.5rem;
 
     @media (width < 48rem) {
       display: none;
