@@ -762,8 +762,34 @@ a:active {
 
 .skills {
   display: flex;
-  justify-content: flex-start;
-  flex-direction: column;
+  gap: 4rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  padding: 2rem 1rem;
+  background: #fff;
+}
+
+.skills::-webkit-scrollbar {
+  display: none; /* Hides scrollbar in WebKit browsers */
+}
+
+.skills > * {
+  flex: 0 0 auto;
+  scroll-snap-align: start;
+  border-radius: 16px;
+  background: #f7f7f7;
+  padding: 2rem;
+  min-width: 250px; /* Customize as needed */
+  text-align: center;
+  font-weight: 500;
+  color: #333;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease;
+}
+
+.skills > *:hover {
+  transform: scale(1.05);
 }
 
 img.rounded {
@@ -773,14 +799,16 @@ img.rounded {
 
 .about {
   display: flex;
-  gap: 2rem; /* Space between items */
+  gap: 2rem;
   background: var(--background-color-about);
   padding: 4rem;
+  position: relative;
+  flex-wrap: wrap; /* Add this for responsiveness */
 }
 
 .about-item-1 {
   flex: 2 1 0; /* Takes up 2/3 of the space */
-  padding: 2rem;
+
 }
 
 .about-item-2 {
@@ -791,6 +819,14 @@ img.rounded {
 .column {
   width: 100%;
   padding: 12rem 12rem;
+}
+
+.artwork-title h2 {
+  font-size: 1.8rem;
+  text-align: left;  /* Align text to the left */
+  margin-top: 50px;  /* Space above the title */
+  margin-bottom: 20px; /* Space below the title */
+  padding-left: 15px; /* Align with the photos (adjust based on your layout) */
 }
 
 div.scroll-container {
@@ -804,11 +840,27 @@ div.scroll-container img {
   padding: 10px;
 }
 
+/* Make images black and white by default */
+.scroll-container img {
+  filter: grayscale(100%);
+  transition: filter 0.3s ease; /* Smooth transition */
+}
+
+/* On hover, return to color */
+.scroll-container img:hover {
+  filter: grayscale(0%);
+}
+
+.certificates-spacing {
+  height: 60px; /* Adjust based on how much space you want */
+}
+
 *,
 *::before,
 *::after {
   box-sizing: border-box;
 }
+
 
 :root {
   --items: min(30rem, 80vw);
@@ -1043,7 +1095,7 @@ section {
 /* 2nd hero hidden */
 #shape-the-future {
   color: #fff;
-  background: linear-gradient(125deg, rgb(255, 255, 255), rgb(248, 211, 234));
+  background: linear-gradient(125deg, rgb(255, 255, 255), rgb(244, 225, 237));
 
   @supports (animation-timeline: view()) {
     clip-path: url("#blob");
@@ -1321,6 +1373,35 @@ body:hover .warning {
   }
 }
 
+@media screen and (max-width: 600px) {
+  .about {
+    flex-direction: column;
+    padding: 2rem 1rem;
+  }
+
+  .about-item-1,
+  .about-item-2 {
+    padding: 0;
+  }
+
+  .hero__content {
+    padding-right: 0;
+  }
+
+  .column {
+    padding: 2rem 1rem;
+  }
+
+  .certificates h3 {
+    font-size: 1.2rem;
+  }
+
+  .certificates ul {
+    font-size: 0.95rem;
+  }
+}
+
+
 /* Global Footer
 
 ███████  ██████   ██████  ████████ ███████ ██████  
@@ -1330,29 +1411,134 @@ body:hover .warning {
 ██       ██████   ██████     ██    ███████ ██   ██ 
                                                    
 */
-
-.global-footer {
-  display: flex; /* Use flexbox */
-  align-items: center; /* Aligns items vertically */
-  background: var(--background-color-footer);
-  padding: 2rem;
+footer {
+  background: radial-gradient(
+    ellipse at bottom center,
+    rgba(255, 105, 180, 0.15) 0%,
+    rgba(255, 192, 203, 0.1) 40%,
+    rgba(255, 255, 255, 1) 90%
+  );
+  color: #222;
+  padding: 4rem 3rem;
+  font-family: 'Helvetica Neue', sans-serif;
 }
 
-.footer-item-1 {
+.footer-container {
   display: flex;
-  padding: 2rem;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 3rem;
 }
 
-.ex1 {
-  display: flex; /* Make the social icons a flex container */
-  justify-content: flex-end; /* Aligns icons to the right */
+.footer-left {
+  flex: 1;
+  min-width: 250px;
+  max-width: 400px;
+}
 
-  padding: 4rem 4rem;
+.footer-logo {
+  width: 200px;
+  margin-bottom: 1rem;
+}
+
+.footer-title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin: 0.5rem 0 1rem;
+}
+
+.footer-bio {
+  font-size: 1rem;
+  color: #444;
+  line-height: 1.5;
+  margin-top: 1rem;
+  font-weight: 600;
+}
+
+.footer-right {
+  flex: 1;
+  min-width: 280px;
+  max-width: 320px;
+  text-align: right;
+}
+
+
+
+.section-heading {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.8rem;
+  color: #222;
+}
+
+.section-sub {
+  font-size: 0.85rem;
+  margin-bottom: 1.2rem;
+  color: #333;
+  font-weight: 400;
+}
+
+.social-list {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  font-size: 1.2rem;
+  padding: 0;
+  list-style: none;
+}
+
+.social-list a {
+  color: #111;
+  transition: color 0.3s ease;
+}
+
+.social-list a:hover {
+  color: hotpink;
 }
 
 .footer-item-4 {
-  padding: 2rem;
-  align-items: center;
+  text-align: center;
+  padding: 2rem 0 1rem;
+  width: 100%;
+  color: black;
+}
+
+.footer-item-4 a {
+  color: black;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.footer-item-4 a:hover {
+  color: hotpink;
+}
+
+.fineprint {
+  font-size: 12px;
+  color: #555;
+}
+
+.heart {
+  color: hotpink;
+}
+
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-left,
+  .footer-right {
+    text-align: center;
+  }
+
+  .social-list {
+    justify-content: center;
+  }
 }
 
 /* Project Page 
@@ -1531,23 +1717,9 @@ body:hover .warning {
   height: auto;
 }
 
-.image-description {
-  max-width: 300px;
-  padding-left: 6rem;
-  font-size: 14px;
-  line-height: 1.4;
-}
 
-.image-description h1 {
-  margin: 0;
-  font-size: 18px;
-  font-weight: bold;
-}
 
-.image-description h3 {
-  margin: 5px 0 0 0;
-  font-size: 14px;
-}
+
 .text-span1 {
   font-size: 1.2rem;
   font-family: var(--body-typeface);
