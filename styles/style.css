@@ -321,6 +321,42 @@ a:active {
                                  
 */
 
+.hero-header {
+  padding: 2px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .hero-header {
+    flex-direction: column;
+    padding: 10px 0;
+  }
+
+  .branding-navigation {
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: center;
+  }
+
+  .logo img {
+    width: 1.5rem; /* Shrinks logo a bit more */
+  }
+
+  .custom-navigation {
+    font-size: 12px; /* ⬅️ SHRINKS About + Projects */
+    font-weight: 400;
+    padding: 4px 8px;
+  }
+
+  .hero-nav1,
+  .hero-nav2 {
+    padding: 0.25rem;
+  }
+}
+
+
 .custom-navigation {
   text-decoration: none;
   color: #000; /* set your base text color */
@@ -1621,6 +1657,7 @@ footer {
     padding: 0; /* Remove padding on mobile screens */
   }
 
+
   .overview,
   .role,
   .timeline {
@@ -1937,6 +1974,7 @@ footer {
 
 */
 
+
 /* Medium devices (tablets, 768px and up) */
 
 @media (min-width: 768px) {
@@ -2018,7 +2056,7 @@ footer {
   /* Padding around work grid and project page */
   .portfolio,
   .project-wrapper {
-    padding: 2rem 2rem;
+    padding: 0rem;
   }
 
   .project-list {
