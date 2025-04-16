@@ -880,31 +880,32 @@ img.rounded {
   padding-left: 15px; /* Align with the photos (adjust based on your layout) */
 }
 
-scroll-container {
+.scroll-container {
   display: flex;
   gap: 1rem;
   overflow-x: auto;
+  overflow-y: hidden;
+  white-space: nowrap;
   padding: 1rem 0;
   scroll-behavior: smooth;
   -webkit-overflow-scrolling: touch;
-  max-width: 100%;
+
+  max-width: 100vw; /* Keep it within viewport width */
   box-sizing: border-box;
 }
 
 .scroll-container img {
-  width: 100%;
-  max-width: 290px;
+  flex: 0 0 auto;
+  width: 290px;
   height: auto;
+  object-fit: cover;
 }
 
-/* Make images black and white by default */
 
-/* On hover, return to color */
-.scroll-container img:hover {
-  filter: grayscale(0%);
-}
 
-/* Make images black and white by default */
+
+
+
 
 
 .certificates-spacing {
@@ -938,7 +939,10 @@ body {
 img {
   max-inline-size: 100%;
   block-size: auto;
+  width: 100%;
+  height: auto;
 }
+
 
 hr[id] {
   border: 0;
@@ -1921,18 +1925,46 @@ footer {
   transition: all 0.3s ease-in-out;
 }
 
-/* 📱 Mobile Responsive Style */
+
 @media (max-width: 768px) {
+  .image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
   .image-container img {
-    width: 90%;
+    width: 60% !important;
+    height: auto;
+    display: block;
+    margin: 0 auto;
   }
 
   .background-image {
-    height: auto;
-    padding-top: 2rem;
-    padding-bottom: 2rem;
+    height: auto !important;
+    padding-top: 2rem !important;
+    padding-bottom: 2rem !important;
+    flex-direction: column;
   }
 }
+@media (max-width: 768px) {
+  .project-horizontal-row {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .project-description2 {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+  .project-wrapper {
+    padding: 20px;
+  }
+}
+
+
 
 
 /* Main Project Image Area */
