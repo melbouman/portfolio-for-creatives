@@ -810,6 +810,11 @@ a:active {
                                            
 */
 
+@media (max-width: 768px) {
+  .hide-on-mobile {
+    display: none;
+  }
+}
 
 
 .skills {
@@ -939,9 +944,8 @@ body {
 img {
   max-inline-size: 100%;
   block-size: auto;
-  width: 100%;
-  height: auto;
 }
+
 
 
 hr[id] {
