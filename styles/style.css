@@ -322,7 +322,7 @@ a:active {
 */
 
 .hero-header {
-  padding: 2px;
+  padding: 1px;
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -331,7 +331,7 @@ a:active {
 @media (max-width: 768px) {
   .hero-header {
     flex-direction: column;
-    padding: 10px 0;
+    padding: 5px 0;
   }
 
   .branding-navigation {
@@ -340,9 +340,7 @@ a:active {
     align-items: center;
   }
 
-  .logo img {
-    width: 1.5rem; /* Shrinks logo a bit more */
-  }
+ 
 
   .custom-navigation {
     font-size: 12px; /* ⬅️ SHRINKS About + Projects */
@@ -513,8 +511,9 @@ a:active {
   padding: 0.5rem 0.5rem;
   flex-direction: column;
 }
+
 .logo {
-  width: 2rem;
+  max-width: 5rem;
   padding: 1rem;
   /* TODO: Adjust the width of the logo on mobile devices here. */
 }
@@ -796,6 +795,14 @@ a:active {
                                            
 */
 
+/* Hide elements with .hide-on-mobile class on screens smaller than 768px */
+@media (max-width: 768px) {
+  .hide-on-mobile {
+    display: none !important;
+  }
+}
+
+
 .skills {
   display: flex;
   gap: 4rem;
@@ -835,12 +842,11 @@ img.rounded {
 
 .about {
   display: flex;
-  gap: 2rem;
-  background: var(--background-color-about);
-  padding: 4rem;
-  position: relative;
-  flex-wrap: wrap; /* Add this for responsiveness */
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 1rem;
 }
+
 
 .about-item-1 {
   flex: 2 1 0; /* Takes up 2/3 of the space */
@@ -865,22 +871,24 @@ img.rounded {
   padding-left: 15px; /* Align with the photos (adjust based on your layout) */
 }
 
-div.scroll-container {
-  background-color: #ffffff;
-  overflow: auto;
-  white-space: nowrap;
-  padding: 10px;
+.scroll-container {
+  display: flex;
+  gap: 1rem;
+  overflow-x: auto;
+  padding: 1rem 0;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
-div.scroll-container img {
-  padding: 10px;
+.scroll-container img {
+  width: 100%;
+  max-width: 290px;
+  height: auto;
 }
 
 /* Make images black and white by default */
-.scroll-container img {
-  filter: grayscale(100%);
-  transition: filter 0.3s ease; /* Smooth transition */
-}
 
 /* On hover, return to color */
 .scroll-container img:hover {
@@ -1437,6 +1445,23 @@ body:hover .warning {
   }
 }
 
+/* Media Queries */
+@media (min-width: 768px) {
+  .about {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .about-item-1,
+  .about-item-2 {
+    flex: 1;
+  }
+
+  .scroll-container img {
+    max-width: 290px;
+  }
+}
 
 /* Global Footer
 
@@ -1474,7 +1499,7 @@ footer {
 }
 
 .footer-logo {
-  width: 200px;
+  max-width: 200px;
   margin-bottom: 1rem;
 }
 
@@ -1587,6 +1612,9 @@ footer {
                                                                                                
 */
 /* General styling for both sections */
+
+
+
 .project-title-content {
   display: flex;
   align-items: flex-start;
@@ -1674,17 +1702,17 @@ footer {
   }
 }
 
-.responsive-image {
-  width: 100%;         /* Make it flexible */
-  max-width: 1000px;   /* Set a max width if needed */
-  height: auto;        /* Maintain aspect ratio */
-  justify-content: ;
+.responsive-img {
+  width: 100%;
+  max-width: 700px;
+  height: auto;
 }
 
-@media (max-width: 768px) {
-  .responsive-image {
-    width: 40%;         /* Shrink image to 80% of the screen on mobile */
-    max-width: 500px;   /* Optional: limit width further on smaller screens */
+@media screen and (max-width: 768px) {
+  .responsive-img {
+    width: 90%;
+    max-width: 100%;
+    height: auto;
   }
 }
 
@@ -1734,7 +1762,7 @@ footer {
   align-items: flex-start;
   width: 100%;
   text-decoration: none;
-  padding: 6rem 6rem;
+  padding: 0rem;
   display: flex;
 }
 
@@ -1813,7 +1841,7 @@ footer {
   justify-content: flex-end;
   margin-bottom: 0.5rem;
 
-  padding: 0rem 4rem;
+  padding: 0rem 0.5rem;
 }
 
 .project-navigation {
@@ -1822,6 +1850,7 @@ footer {
   justify-content: space-between;
   text-align: center;
   align-items: center;
+  padding-right: 2rem;
   width: 100%;
 }
 
@@ -1830,7 +1859,7 @@ footer {
   flex-direction: row;
   align-items: flex-start; /* aligns image with top of text */
   justify-content: space-between;
-    padding: 12rem 1rem 12rem 1rem; /* top right bottom left */
+    padding: 1rem 1rem 1rem 1rem; /* top right bottom left */
   gap: 1rem; /* optional: adds space between text and image */
 }
 
@@ -1862,6 +1891,37 @@ footer {
   font-size: 4rem; /* Slightly smaller heading */
   padding: 1.5rem; /* Reduce padding */
 }
+
+.background-image {
+  background-color: rgb(187, 188, 190);
+  height: 90vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 5rem;
+  box-sizing: border-box;
+}
+
+.image-container img {
+  width: 700px;
+  height: auto;
+  transition: all 0.3s ease-in-out;
+}
+
+/* 📱 Mobile Responsive Style */
+@media (max-width: 768px) {
+  .image-container img {
+    width: 90%;
+  }
+
+  .background-image {
+    height: auto;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+}
+
 
 /* Main Project Image Area */
 
