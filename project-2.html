@@ -185,6 +185,31 @@
       </div>
     </div>
 
+    <div
+      class="background-image"
+      style="
+        background-image: url('assets/branding-images/project-2/pexels-cottonbro-10131797.jpg');
+      "
+    >
+      <div class="image-container">
+        <img
+          src="assets/branding-images/project-2/mellynewest.png"
+          alt="Melly Collection"
+          style="width: 100%; max-width: 1000px; height: auto"
+        />
+      </div>
+    </div>
+
+    <div class="background-image" style="background-color: rgb(136, 135, 129)">
+      <div class="image-container">
+        <img
+          src="assets/branding-images/project-2/full cart-1.png"
+          alt="Melly Shop All"
+          style="width: 100%; max-width: 1000px; height: auto"
+        />
+      </div>
+    </div>
+
     <div class="background-image" style="background-color: rgb(136, 135, 129)">
       <div class="image-container">
         <img
@@ -219,8 +244,10 @@
           <h3 class="section-sub">
             <a href="tel:+1234567890">+1 (250) 714-9738</a>
           </h3>
+
           <h4 class="section-heading">Where to Find Me</h4>
           <h3 class="section-sub">Vancouver, B.C</h3>
+
           <h4 class="section-heading">Socials</h4>
           <ul class="social-list">
             <li>
@@ -230,7 +257,7 @@
             </li>
             <li>
               <a
-                href="https://linkedin.com/in/yourprofile"
+                href="https://www.linkedin.com/in/amelia-bouman-b67512294/"
                 target="_blank"
                 title="LinkedIn"
                 ><i class="fab fa-linkedin-in"></i
@@ -238,7 +265,7 @@
             </li>
             <li>
               <a
-                href="https://instagram.com/yourprofile"
+                href="https://www.instagram.com/melcreativedesign/"
                 target="_blank"
                 title="Instagram"
                 ><i class="fab fa-instagram"></i
@@ -263,6 +290,26 @@
           Amelia Bouman.
         </p>
       </div>
+      <script
+        src="https://kit.fontawesome.com/a076d05399.js"
+        crossorigin="anonymous"
+      ></script>
     </footer>
+
+    <div id="myID" class="bottomMenu hide">
+      <a href="project-3.html">Next Project</a>
+    </div>
+
+    <script>
+      myID = document.getElementById("myID");
+      var myScrollFunc = function () {
+        var y = window.scrollY;
+        if (y >= 800) {
+          myID.className = "bottomMenu show";
+        } else {
+          myID.className = "bottomMenu hide";
+        }
+      };
+    </script>
   </body>
 </html>
