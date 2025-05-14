@@ -1798,8 +1798,9 @@ footer {
 
 .image-container img {
   display: block;
-  max-width: 80%;
+  max-width: 100%;
   height: auto;
+  justify-content: center;
 }
 
 
