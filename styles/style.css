@@ -85,7 +85,7 @@ html {
   --h3-color: #000000;
   --h4-color: #000000;
   --h5-color: #000000;
-  --h6-color: #000000;
+  --h6-color: #373737;
   --primary-text-color: #222;
   --holding-page-title-color: #000000;
   --accent-color: #eddcdc;
@@ -140,7 +140,7 @@ svg {
 */
 
 h1 {
-  font-size: 1.5rem;
+  font-size: 1rem;
   font-family: var(--heading-typeface);
   color: var(--h1-color);
   margin-bottom: 2rem;
@@ -169,13 +169,15 @@ h4 {
 }
 
 h5 {
-  font-size: 1rem;
+  font-size: 2rem;
+  font-family: var(--heading-typeface);
   margin-bottom: 1rem;
   color: var(--h5-color);
 }
 
 h6 {
   font-size: 1rem;
+  
   margin-bottom: 1rem;
   color: var(--h6-color);
 }
@@ -296,7 +298,7 @@ a:active {
 }
 
 .project-description1 {
-  font-size: 50px;
+  font-size: 80px;
   font-weight: 200;
   line-height: 128%;
   text-decoration: none;
@@ -656,6 +658,14 @@ a:active {
   flex-direction: column;
   padding: 1rem 0; /* Reduce top/bottom padding */
 }
+
+.subtext {
+  font-size: 10px; /* smaller than default */
+  font-weight: normal;
+  margin-top: 2px;
+  color: #000000;
+}
+
 
 
 .items {
@@ -2096,7 +2106,7 @@ footer {
   /* TODO: Add or adjust styles here for large devices. */
 
   h1 {
-    font-size: 3.275rem;
+    font-size: 3.75rem;
   }
 
   h2 {
@@ -2115,6 +2125,7 @@ footer {
   .hero {
     min-height: 100%;
   }
+
 
   .grid {
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
