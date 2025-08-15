@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Mel Creative Gallery</title>
+    
+      <!-- Favicon -->
+      <link rel="icon" href="assets/branding-images/mel-favicon.svg" type="image/svg+xml" />
+    
+    
+    
+    
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        background: #f9f9f9;
+        color: #333;
+      }
+
+      header {
+        text-align: center;
+        padding: 40px 20px 20px;
+        background: rgba(255, 255, 255, 0.391);
+      }
+
+      header img {
+        max-width: 200px;
+        margin-bottom: 10px;
+      }
+
+      header p {
+        font-size: 1rem;
+        color: #666;
+      }
+
+      .toggle-container {
+        text-align: center;
+        margin: 20px 0;
+      }
+
+      input[type="radio"] {
+        display: none;
+      }
+
+      label {
+        display: inline-block;
+        padding: 10px 20px;
+        margin: 0 10px;
+        border: 2px solid #333;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        border-radius: 30px;
+        font-weight: bold;
+      }
+
+      input[type="radio"]:checked + label {
+        background: rgb(245, 101, 217);
+        color: white;
+      }
+
+      /* Galleries */
+      .gallery {
+        display: none;
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: 20px;
+        max-width: 1200px;
+        margin: auto;
+        padding: 20px;
+        opacity: 0;
+        transition: opacity 0.5s ease;
+      }
+
+      /* Show the selected gallery */
+      #paintings:checked ~ .paintings-gallery {
+        display: grid;
+        opacity: 1;
+      }
+
+      #sewing:checked ~ .sewing-gallery {
+        display: grid;
+        opacity: 1;
+      }
+
+      /* Gallery item styling */
+      .item {
+        background: rgba(
+          255,
+          255,
+          255,
+          0.1
+        ); /* almost transparent, adjust opacity */
+
+        padding: 10px;
+        text-align: center;
+        position: relative;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        backdrop-filter: blur(5px); /* optional: adds a frosted glass effect */
+      }
+
+      /* Hover effect */
+      .item:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+      }
+
+      .item img {
+        width: 100%;
+        height: auto;
+        display: block;
+        margin-bottom: 10px;
+      }
+
+      .item h3 {
+        margin: 5px 0;
+      }
+
+      .item p.price {
+        font-weight: bold;
+        margin-bottom: 10px;
+      }
+
+      details {
+        font-size: 0.9rem;
+        color: #555;
+      }
+
+      details summary {
+        cursor: pointer;
+        font-weight: bold;
+      }
+
+      details[open] summary {
+        color: #000;
+      }
+
+      /* SOLD badge */
+      .sold {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        background: rgb(245, 101, 217);
+        color: white;
+        padding: 5px 10px;
+        font-weight: bold;
+        font-size: 0.9rem;
+        border-radius: 5px;
+        animation: pop 0.5s ease;
+      }
+
+      @keyframes pop {
+        0% {
+          transform: scale(0);
+        }
+        50% {
+          transform: scale(1.2);
+        }
+        100% {
+          transform: scale(1);
+        }
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        background: url(assets/about-pics/Untitled_Artwork\ 26.png) no-repeat
+          center center fixed;
+        background-size: cover;
+        color: #333;
+        position: relative;
+      }
+
+      body::before {
+        content: "";
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(255, 255, 255, 0.8); /* adjust transparency */
+        z-index: -1;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <img
+        src="assets/branding-images/Home/mel-logo.png"
+        alt="mel-logo-ux-ui-designer"
+      />
+
+      <p>
+        Email <strong>mel@melcreative</strong> to reserve a piece — first person
+        to email gets first dibs.
+      </p>
+    </header>
+
+    <div class="toggle-container">
+      <!-- Toggle Inputs and Labels -->
+      <input type="radio" id="paintings" name="category" checked />
+      <label for="paintings">Paintings</label>
+
+      <input type="radio" id="sewing" name="category" />
+      <label for="sewing">Sewing Projects</label>
+
+      <!-- Paintings Gallery -->
+      <div class="gallery paintings-gallery">
+        <div class="item">
+          <span class="sold">SOLD</span
+          ><img src="assets/about-pics/IMG_5895 2.jpg" />
+          <h3>Midnight Snack</h3>
+          <p class="price">$300</p>
+          <details>
+            <summary>Description</summary>
+            <p>
+              Created using crayon and pencil crayon, the textures give it a
+              rich, layered energy—mixing the softness of hand-drawn lines with
+              the vibrant pop of waxy colour.
+            </p>
+          </details>
+        </div>
+        <div class="item">
+          <span class="sold">SOLD</span>
+          <img
+            src="assets/about-pics/Screenshot 2025-08-13 at 12.42.25 PM.png"
+          />
+          <h3>Silent Home</h3>
+          <p class="price">$250</p>
+          <details>
+            <summary>Description</summary>
+            <p>
+              Painted in acrylic. The brushstrokes are layered and deliberate,
+              creating depth and warmth that mirror the closeness of the couple,
+              while subtle colour shifts suggest the unspoken language of love..
+            </p>
+          </details>
+        </div>
+        <div class="item">
+          <span class="sold">SOLD</span>
+          <img
+            src="assets/about-pics/Screenshot 2025-08-13 at 12.42.55 PM.png"
+          />
+          <h3>Blue Bloom</h3>
+          <p class="price">$400</p>
+          <details>
+            <summary>Description</summary>
+            <p>
+              Acrylic on wood, washed in deep and electric blue tones, this
+              piece carries the confident, offbeat energy of Tyler, the Creator.
+              The smooth, layered paint gives it a slick, statement-making
+              presence—cool, bold, and unapologetically fresh.
+            </p>
+          </details>
+        </div>
+        <div class="item">
+          <span class="sold">SOLD</span>
+          <img
+            src="assets/about-pics/Screenshot 2025-08-13 at 12.45.21 PM.png"
+          />
+          <h3>Bones</h3>
+          <p class="price">$500</p>
+          <details>
+            <summary>Description</summary>
+            <p>
+              A colourful skull rendered in soft, muted tones, this piece blends
+              vibrancy with restraint. The palette keeps its edge while leaning
+              toward subtlety, giving the skull a calm, almost contemplative
+              presence—alive with colour yet steeped in stillness.
+            </p>
+          </details>
+        </div>
+        <div class="item">
+          <img src="assets/about-pics/IMG_5892 2.jpg" />
+          <h3>Don’t Even Trip</h3>
+          <p class="price">$350</p>
+          <details>
+            <summary>Description</summary>
+            <p>
+              Acrylic on paper with bold, layered colour and subtle sci-fi
+              influence..
+            </p>
+          </details>
+        </div>
+        <div class="item">
+          <img src="assets/about-pics/IMG_5893 2.jpg" />
+          <h3>Citrus Heist</h3>
+          <p class="price">$420</p>
+          <details>
+            <summary>Description</summary>
+            <p>
+              Acrylic on canvas, vibrant oranges pop against muted tones,
+              capturing a mischievous, playful energy.
+            </p>
+          </details>
+        </div>
+        <div class="item">
+          <img src="assets/about-pics/IMG_5894 2.jpg" />
+          <h3>High & Heels</h3>
+          <p class="price">$270</p>
+          <details>
+            <summary>Description</summary>
+            <p>
+              Acrylic on paper, hallucinatory spirit of Fear and Loathing in Las
+              Vegas.
+            </p>
+          </details>
+        </div>
+        <div class="item">
+          <img src="assets/about-pics/IMG_5898 2.jpg" />
+          <h3>Slime</h3>
+          <p class="price">$400</p>
+          <details>
+            <summary>Description</summary>
+            <p>Large abstract canvas done with August Quinn: @augdogg99.</p>
+          </details>
+        </div>
+        <div class="item">
+          <img
+            src="assets/about-pics/Screenshot 2025-04-16 at 5.25.41 AM.png"
+          />
+          <h3>Toyed with Life</h3>
+          <p class="price">$600</p>
+          <details>
+            <summary>Description</summary>
+            <p>
+              Acrylic on large canvas, this playful yet eerie scene depicts
+              stuffed animals caught in a claw machine, with three skeletons
+              reaching for their prize. Bold colours and dynamic composition
+              bring a mix of whimsy and dark humour to life..
+            </p>
+          </details>
+        </div>
+      </div>
+
+      <!-- Sewing Gallery -->
+      <div class="gallery sewing-gallery">
+        <div class="item">
+          <img src="https://via.placeholder.com/300x300?text=Sewing+1" />
+          <h3>Graffiti Bikinis</h3>
+          <p class="price">COMING SOON</p>
+          <details>
+            <summary>Description</summary>
+            <p>.</p>
+          </details>
+        </div>
+        <div class="item">
+          <img src="https://via.placeholder.com/300x300?text=Sewing+2" />
+          <h3>Graffiti Hats</h3>
+          <p class="price">COMING SOON</p>
+          <details>
+            <summary>Description</summary>
+            <p>.</p>
+          </details>
+        </div>
+      </div>
+    </div>
+    <!-- Footer -->
+    <footer
+      style="
+        background: #c2185c10;
+        color: rgb(239, 65, 167);
+        text-align: center;
+        padding: 40px 20px;
+        font-family: Arial, sans-serif;
+      "
+    >
+      <div style="max-width: 1200px; margin: auto">
+        <p style="margin: 0 0 10px">© 2025 Mel Creative</p>
+        <p style="margin: 0 0 10px">
+          Email:
+          <a
+            href="mailto:mel@melcreative.com"
+            style="color: rgb(233, 59, 149); text-decoration: underline"
+            >mel@melcreative.com</a
+          >
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
